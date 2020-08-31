@@ -1,7 +1,7 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Income extends Model {
     /**
@@ -9,16 +9,13 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
-    }
-  };
+  }
   Income.init({
     incomeSoure: DataTypes.STRING,
-    total: DataTypes.FLOAT
+    total: DataTypes.FLOAT,
   }, {
     sequelize,
-    modelName: 'Income',
+    modelName: 'Incomes',
   });
   return Income;
 };
