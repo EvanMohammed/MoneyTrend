@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="./css/style.css" type="text/css" />
+		<title>Budget App</title>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		
+	</head>
+	<body>
+        <h1>Budget App</h1>
+        <h2>Add Money</h2>
+        <form class="create-form">
+        
+          <div class="form-group">
+            <label for="moneyAmount">Amount:</label>
+            <input type="number" id="moneyAmount" name="name">
+          </div>
+        
+          <div class="form-group">
+            <label for="storeMoney">Choose where to store your money</label><br>
+            <input type="radio" name="storeMoney" value="1" checked> Savings<br>
+            <input type="radio" name="storeMoney" value="0"> Expenses 
+          </div>
+        
+          <button type="submit">Add</button>
+        </form>
+        <div class="tables">
+        <h2 id="expenses">Expenses :</h2>
+        <ul></ul>
+
+
+        <h2 id="savings">Savings :</h2>
+        <ul></ul>
+    </div>
+        <h2 id="balance">Current Balance :</h2>
+        <ul></ul>
+    </div>
+	</body>
+</html>
