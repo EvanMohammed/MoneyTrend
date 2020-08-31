@@ -1,2 +1,4 @@
 node_modules
+migrations
+seeders
 models/index.js
