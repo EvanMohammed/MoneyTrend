@@ -10,25 +10,13 @@ body {
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
   }
   
-  .label {
+.label {
     font-weight: bold;
   }
   
-  .create-update-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-
-  /* Styling the  */
-  button {
+button {
     margin-top: 1%;
     text-transform: uppercase;
     font-family: 'Squada One', cursive;
@@ -59,30 +47,87 @@ li {
       0 0 20px -5px rgba(0,0,0,.4),
       0 0 0px 3px #FFF inset;
   }
-  h1 , h2{
+h1 {
+    text-align: center;
     margin-top: 1%;
     font-family: 'Open Sans', sans-serif;
     color: rgb(22, 105, 80);
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 30px;
+    font-size: 100px;
     font-weight: 800;
     letter-spacing: 0px;
     line-height: 1;
     text-shadow: #EDEDED 3px 2px 0;
     position: relative;
   }
-  ul {
+
+h2 {
+    text-align: center;
     margin-top: 1%;
-    margin-left: 40%;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(22, 105, 80);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 1;
+    text-shadow: #EDEDED 3px 2px 0;
+    position: relative;
+  }
+
+
+h5 {
+    text-align: center;
+    font-size: medium;
+  }
+
+  .sub-header {
+    text-align: center;
+    font-size: large;
+  }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1/2;
+  outline-style: double;
+  outline-color: black;
+}
+
+.two { 
+  grid-column: 2 / 2;
+  grid-row: 1/2 ;
+  outline-style: double;
+  outline-color: black;
+}
+
+.three {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+#balance {
+    text-align: end;
+    font-size: 30px;
+  }
+
+ul {
+    margin-top: 1%;
     margin-top: 20px;
   }
   
-  img{
+img{
     margin-top: 1%;
     border-image-slice: bevel;
     border-radius:30px 0 30px 0;
     margin-left: 40%;
   }
   
-  #expenses {margin-left: 60%}
+ 

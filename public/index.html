@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="./css/style.css" type="text/css" />
-		<title>Budget App</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		
-	</head>
-	<body>
-        <h1>Budget App</h1>
-        <h2>Add Money</h2>
-        <form class="create-form">
-        
-          <div class="form-group">
-            <label for="moneyAmount">Amount:</label>
-            <input type="number" id="moneyAmount" name="name">
-          </div>
-        
-          <div class="form-group">
-            <label for="storeMoney">Choose where to store your money</label><br>
-            <input type="radio" name="storeMoney" value="1" checked> Savings<br>
-            <input type="radio" name="storeMoney" value="0"> Expenses 
-          </div>
-        
-          <button type="submit">Add</button>
-        </form>
-        <div class="tables">
-        <h2 id="expenses">Expenses :</h2>
-        <ul></ul>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <title>Budget App</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<main>
+
+  <div class="container">
+    <h1>MoneyTrend</h1>
+    <p class="sub-header">Make your money work for you!</p>
+  </div>
+
+  <body>
+
+    <div class="wrapper">
+      <div class="one" id="income">
+        <h5>Recent Income</h5>
+        <ul>
+          <li>Example</li>
+          <li>Example</li>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </ul>
+        <div class="card-footer">
+          <button type="submit">My Income</button>
+        </div>
+      </div>
+      <div class="two" id="expenses">
+        <h5>Recent Expenses</h5>
+        <ul>
+          <li>Example</li>
+          <li>Example</li>
+          <li>Example</li>
+          <li>Example</li>
+          <li>Example</li>
+        </ul>
+        <div class="card-footer">
+          <button type="submit">My Expenses</button>
+        </div>
+      </div>
+  </body>
+  <div class="three" id="balance">
+    <h3>Current Balance:</h3>
+  </div>
+  </div>
+</main>
 
 
-        <h2 id="savings">Savings :</h2>
-        <ul></ul>
-    </div>
-        <h2 id="balance">Current Balance :</h2>
-        <ul></ul>
-    </div>
-	</body>
 </html>
