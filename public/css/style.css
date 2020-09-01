@@ -3,7 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
 body {
   padding: 20px 80px;
-  background: #eee url(../double-bubble-outline.png);
+  background: #eee url(../images/double-bubble-outline.png);
 }
 
 
@@ -97,15 +97,26 @@ h5 {
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
+  row-gap: 5em;
   outline-style: double;
   outline-color: black;
+  background-color: #00dfa2;
 }
 
 .two { 
   grid-column: 2 / 2;
   grid-row: 1/2 ;
+  row-gap: 5em;
   outline-style: double;
   outline-color: black;
+  background-color: #00dfa2;
+}
+
+.card {
+  row-gap: 5em;
+  outline-style: double;
+  outline-color: black;
+  background-color: #00dfa2;
 }
 
 .three {
