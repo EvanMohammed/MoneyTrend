@@ -7,7 +7,10 @@ const passport = require('./config/passport');
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require('./models');
-const router = require('./controllers/expensecategories');
+
+// controller
+const expenseAPI = require('./controllers/expensecategories');
+const incomeAPI = require('./controllers/incomecontroller');
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
@@ -23,7 +26,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Requiring our routes
-app.use(router);
+app.use(expenseAPI);
+app.use(incomeAPI);
 require('./routes/html-routes.js')(app);
 require('./routes/api-routes.js')(app);
 

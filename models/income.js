@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
   }
   Income.init({
-    incomeSoure: DataTypes.STRING,
+    incomeSource: DataTypes.STRING,
     total: DataTypes.FLOAT,
   }, {
     sequelize,
