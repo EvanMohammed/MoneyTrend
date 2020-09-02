@@ -1,7 +1,3 @@
-$('.dropdown-toggle').on('click touchstart', () => {
-  $('.dropdown-menu').toggleClass('dropdown-menu-open');
-});
-
 function createNode(element) {
   return document.createElement(element);
 }
@@ -11,18 +7,22 @@ function append(parent, el) {
 }
 const expenseHandlebarUl = document.querySelector('.expenses');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
-  const expneses = data[0].ExpenseCategories;
-  expneses.forEach((expense) => {
+  const expenses = data[0].ExpenseCategories;
+
+  expenses.forEach((expense) => {
     const p = createNode('p');
 
     p.innerHTML = `<p><a href="#"> <div class="dropdown">
     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${expense.categoryName}
         <span class="caret"></span></button>
     <ul class="dropdown-menu">
- 
+ <li>${expense.Expenses[0].expenseName}</li>
     </ul>
 </div></a></p>`;
     append(expenseHandlebarUl, p);
+  });
+  $('.dropdown-toggle').on('click touchstart', () => {
+    $('.dropdown-menu').toggleClass('dropdown-menu-open');
   });
 }).catch((err) => err);
 
