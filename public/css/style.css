@@ -4,6 +4,7 @@
 body {
   padding: 20px 80px;
   background: #eee url(../double-bubble-outline.png);
+  font-family: 'Cinzel', serif;
 }
 
 
@@ -18,8 +19,6 @@ li {
   
 button {
     margin-top: 1%;
-    text-transform: uppercase;
-    font-family: 'Squada One', cursive;
     font-weight: 800;
     display: block;
     background: #FFF;
@@ -30,27 +29,13 @@ button {
     text-decoration: none;
     position: relative;
     z-index: 1;
-    text-shadow: 
-      1px 1px 0px #FFF, 
-      2px 2px 0px rgb(56, 75, 34),
-      3px 3px 0px #FFF;
-    background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
-    -webkit-transition: 1s all;
-    background-image: -webkit-linear-gradient(left top, 
-      transparent 0%, transparent 25%, 
-      rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
-      transparent 50%, transparent 75%, 
-      rgba(0,0,0,.15) 75%);
-    background-size: 4px 4px;
-    box-shadow: 
-      0 0 0 1px rgba(0,0,0,.4) inset, 
-      0 0 20px -5px rgba(0,0,0,.4),
-      0 0 0px 3px #FFF inset;
+    
   }
 h1 {
     text-align: center;
     margin-top: 1%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
     color: rgb(56, 75, 34);
     text-decoration: none;
     font-size: 100px;
@@ -64,10 +49,8 @@ h1 {
 h2 {
     text-align: center;
     margin-top: 1%;
-    font-family: 'Open Sans', sans-serif;
     color: rgb(96, 108, 56);
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 50px;
     font-weight: 800;
     letter-spacing: 0px;
@@ -123,6 +106,18 @@ h5 {
   grid-row: 2/2;
 }
 
+#beginnerForm {
+  outline-style: double;
+  outline-color: black;
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
+}
+
+.form-control {
+  outline-style: double;
+  outline-color: black;
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
+}
+
 #balance {
     text-align: end;
     font-size: 30px;
@@ -139,5 +134,6 @@ img{
     border-radius:30px 0 30px 0;
     margin-left: 40%;
   }
+
   
  
