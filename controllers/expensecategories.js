@@ -18,4 +18,35 @@ router.get('/api/expenses', (req, res) => {
   });
 });
 
+router.post('/api/expense-categories/', (req, res) => {
+  db.ExpenseCategories.create(req.body).then((newCategory) => {
+    res.json(newCategory);
+  });
+});
+
+router.delete('/api/expense-categories/:id', (req, res) => {
+  db.ExpenseCategories.destroy({
+    where: {
+      id: req.params.id,
+    },
+  }).then(() => {
+    res.sendStatus(200);
+  });
+});
+
+router.post('/api/expense-items/', (req, res) => {
+  db.Expenses.create(req.body).then((newItem) => {
+    res.json(newItem);
+  });
+});
+
+router.delete('/api/expense-items/:id', (req, res) => {
+  db.Expenses.destroy({
+    where: {
+      id: req.params.id,
+    },
+  }).then(() => {
+    res.sendStatus(200);
+  });
+});
 module.exports = router;
