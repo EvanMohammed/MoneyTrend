@@ -1,22 +1,23 @@
 <div class="wrapper">
     <div class="card" id="expenses">
         <h5>My Monthly Expenses</h5>
-        <ul>
-            <li>Most recent expenses</li>
-            <li>Second most recent expenses</li>
-            <li>Third most recent expenses</li>
-            <li>Fourth most recent expenses</li>
-            <li>Fifth most recent expenses</li>
-        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <div class="expenses">
+           
+        </div>
         <div class="card-footer">
 
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Name of your expense"
+                <input type="text" class="form-control" id='expenseName' placeholder="Name of your expense"
+                    aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                <input type="text" class="form-control" id='categoryName' placeholder="Category"
                     aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
                 <div class="input-group-append" id="button-addon4">
-                    <button class="btn btn-outline-secondary" type="button">Add Expenses</button>
+                    <button class="btn btn-outline-secondary" id="addExpenses" type="button">Add Expenses</button>
                     <button class="btn btn-outline-secondary" type="button">Subtract Expenses</button>
                 </div>
             </div>
         </div>
     </div>
+    
+      <script src="./js/expenseHandlebar.js"></script>

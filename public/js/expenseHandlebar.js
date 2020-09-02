@@ -1,4 +1,7 @@
-// clicking expenses button to retrieve expenses data
+$('.dropdown-toggle').on('click touchstart', () => {
+  $('.dropdown-menu').toggleClass('dropdown-menu-open');
+});
+
 function createNode(element) {
   return document.createElement(element);
 }
@@ -6,22 +9,31 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
-const expenseUl = document.querySelector('#expenses');
+const expenseHandlebarUl = document.querySelector('.expenses');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
+    console.log(data)
   const expneses = data[0].ExpenseCategories;
   expneses.forEach((expense) => {
     const p = createNode('p');
-    for (let i = 0; i < 4; i += 1) {
-      p.innerHTML = `Expense Category : ${expense.categoryName}  Expense Detail: ${expense.Expenses[i].expenseName} --- ${expense.Expenses[i].total}`;
-      append(expenseUl, p);
-    }
+
+    p.innerHTML = `<p><a href="#"> <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${expense.categoryName}
+        <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+ 
+    </ul>
+</div></a></p>`;
+    append(expenseHandlebarUl, p);
   });
 }).catch((err) => err);
 
-const createExpenseCategory = () => {
+// posting to API the expenses that the user enters
+const categoryName = document.querySelector('#categoryName');
+document.querySelector('#addExpenses').addEventListener('submit', (event) => {
+  console.log('added category');
+  event.preventDefault();
   const data = {
-    categoryName: 'shopping',
-    UserId: 1,
+    categoryName,
   };
   fetch('/api/expense-categories/', {
     method: 'POST',
@@ -32,25 +44,12 @@ const createExpenseCategory = () => {
     },
     body: JSON.stringify(data),
   });
-};
+});
+// const createExpenseCategory = () => {
+
+// };
 
 // eslint-disable-next-line no-unused-vars
-const createExpenseItem = () => {
-  const data = {
-    expenseName: 'shopping',
-    total: 100,
-    ExpenseCategoryId: 1,
-  };
-  fetch('/api/expense-items/', {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: {
-      'Content-Type': 'application/json',
-
-    },
-    body: JSON.stringify(data),
-  });
-};
 
 // eslint-disable-next-line no-unused-vars
 const createIncome = () => {
