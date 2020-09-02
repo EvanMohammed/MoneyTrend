@@ -149,3 +149,13 @@ img{
   margin: 1em;
   border-radius: 0.4em;
  }
+ .dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu-open {
+  max-height: 200px;
+  transition: all 0.3s ease;
+}

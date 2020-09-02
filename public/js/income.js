@@ -5,7 +5,7 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
-const ul = document.querySelector('#incomes');
+const incomeUl = document.querySelector('#incomes');
 
 fetch('/api/income').then((response) => response.json()).then((data) => {
   const incomes = data[0].Incomes;
@@ -14,14 +14,10 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
   incomes.forEach((income) => {
     const p = createNode('p');
     p.innerHTML = `${income.incomeSource} ${income.total}`;
-    append(ul, p);
+    append(incomeUl, p);
   });
 }).catch((err) => {
   throw err;
-});
-
-document.querySelector('#incomeBtn').addEventListener('click', (event) => {
-  event.preventDefault();
 });
 
 // clicking add money to POST into the API
