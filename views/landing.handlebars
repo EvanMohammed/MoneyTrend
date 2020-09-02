@@ -1,15 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css" type="text/css" />
+  <title>Budget App</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<main>
+  <div class="container">
+    <h1>MoneyTrend</h1>
+    <p class="sub-header">Make your money work for you!</p>
+  </div>
+
+  <body>
 
     <div class="wrapper">
       <div class="one" id="income">
         <h5>Recent Income</h5>
-        <ul>
-          <li>Example</li>
-          <li>Example</li>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
+        <ul id="incomes">
         </ul>
         <div class="card-footer">
           <button type="submit">My Income</button>
@@ -25,6 +36,16 @@
           <li>Example</li>
         </ul>
         <div class="card-footer">
-          <button type="submit">My Expenses</button>
+          <button type="submit" id="incomeBtn">My Expenses</button>
         </div>
       </div>
+      <script src="./js/income.js"></script>
+  </body>
+  <div class="three" id="balance">
+    <h3>Current Balance:</h3>
+  </div>
+  </div>
+</main>
+
+
+</html>

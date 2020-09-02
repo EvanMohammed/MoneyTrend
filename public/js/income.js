@@ -10,16 +10,15 @@ const ul = document.querySelector('#incomes');
 fetch('/api/income').then((response) => response.json()).then((data) => {
   const incomes = data[0].Incomes;
 
-  // const objIncomes = ({}, incomes);
-  // console.log(objIncomes);
+  // displays each income to page
   incomes.forEach((income) => {
-    const li = createNode('li');
-    const span = createNode('span');
-    span.innerHTML = `${income.incomeSource} ${income.total}`;
-    append(li, span);
-    append(ul, li);
+    const p = createNode('p');
+    p.innerHTML = `${income.incomeSource} ${income.total}`;
+    append(ul, p);
   });
-}).catch((err) => err);
+}).catch((err) => {
+  throw err;
+});
 
 document.querySelector('#incomeBtn').addEventListener('click', (event) => {
   event.preventDefault();
