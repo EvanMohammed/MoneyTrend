@@ -11,7 +11,6 @@ function append(parent, el) {
 }
 const expenseHandlebarUl = document.querySelector('.expenses');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
-    console.log(data)
   const expneses = data[0].ExpenseCategories;
   expneses.forEach((expense) => {
     const p = createNode('p');
@@ -30,7 +29,6 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 // posting to API the expenses that the user enters
 const categoryName = document.querySelector('#categoryName');
 document.querySelector('#addExpenses').addEventListener('submit', (event) => {
-  console.log('added category');
   event.preventDefault();
   const data = {
     categoryName,

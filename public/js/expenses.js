@@ -18,21 +18,21 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
   });
 }).catch((err) => err);
 
-const createExpenseCategory = () => {
-  const data = {
-    categoryName: 'shopping',
-    UserId: 1,
-  };
-  fetch('/api/expense-categories/', {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: {
-      'Content-Type': 'application/json',
+// const createExpenseCategory = () => {
+//   const data = {
+//     categoryName: 'shopping',
+//     UserId: 1,
+//   };
+//   fetch('/api/expense-categories/', {
+//     method: 'POST',
+//     credentials: 'same-origin',
+//     headers: {
+//       'Content-Type': 'application/json',
 
-    },
-    body: JSON.stringify(data),
-  });
-};
+//     },
+//     body: JSON.stringify(data),
+//   });
+// };
 
 // eslint-disable-next-line no-unused-vars
 const createExpenseItem = () => {
