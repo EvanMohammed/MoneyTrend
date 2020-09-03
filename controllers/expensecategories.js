@@ -8,10 +8,10 @@ const db = require('../models');
 
 router.get('/api/expenses', (req, res) => {
   db.User.findAll({
+    where: {
+      id: req.user.id,
+    },
     include: {
-      where: {
-        UserId: req.user.id,
-      },
       model: db.ExpenseCategories,
       include: db.Expenses,
     },
