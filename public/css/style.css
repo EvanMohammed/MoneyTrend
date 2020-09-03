@@ -1,7 +1,8 @@
 body {
   padding: 20px 80px;
   background: #eee url(../images/double-bubble-outline.png);
-  font-family: 'Cinzel', serif; }
+  font-family: 'Cinzel', serif; 
+}
 
 li {
   padding: 5px;
@@ -67,13 +68,13 @@ h5 {
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
-  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
 .two {
   grid-column: 2 / 2;
   grid-row: 1/2;
-  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   border-color: #555555; }
 
@@ -87,14 +88,9 @@ h5 {
   grid-column: 2/2;
   grid-row: 2/2; }
 
-<<<<<<< HEAD
-#beginnerForm, #expenseForm, #incomeForm {
-  outline-style: double;
-=======
 #beginnerForm {
->>>>>>> master
   outline-color: black;
-  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
   color: #555555; }
@@ -104,18 +100,28 @@ h5 {
   font-size: 30px; }
 
 ul {
-<<<<<<< HEAD
     margin-top: 1%;
     margin-top: 20px;
   }
-  
-img{
-    margin-top: 1%;
-    border-image-slice: bevel;
-    border-radius:30px 0 30px 0;
-    margin-left: 40%;
-  }
 
+
+.footer {
+  background-color: #606c38;
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  left:0%;
+  right: 0%;
+}
+
+#footerText {
+  color: black !important;
+  text-align: center;
+}
+  
   @font-face {
     font-family: 'typicons';
     src: url("path/to/typicons.eot");
@@ -126,11 +132,6 @@ img{
     font-weight: normal;
     font-style: normal;
   }
-  
- 
-=======
-  margin-top: 1%;
-  margin-top: 20px; }
 
 img {
   margin-top: 1%;
@@ -192,4 +193,3 @@ img {
 .plus-minus-input .input-group-field::-webkit-inner-spin-button,
 .plus-minus-input .input-group-field ::-webkit-outer-spin-button {
   appearance: none; }
->>>>>>> master
