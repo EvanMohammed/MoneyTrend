@@ -6,10 +6,10 @@ const db = require('../models');
 
 router.get('/api/expenses', (req, res) => {
   db.User.findAll({
+    where: {
+      id: req.user.id,
+    },
     include: {
-      where: {
-        UserId: req.user.id,
-      },
       model: db.ExpenseCategories,
       include: db.Expenses,
     },
@@ -19,7 +19,6 @@ router.get('/api/expenses', (req, res) => {
 });
 
 router.post('/api/expense-categories/', (req, res) => {
-  console.log(req.body);
   req.body.UserId = req.user.id;
   db.ExpenseCategories.create(req.body).then((newCategory) => {
     res.json(newCategory);

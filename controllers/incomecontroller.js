@@ -7,7 +7,7 @@ const db = require('../models');
 router.get('/api/income', (req, res) => {
   db.User.findAll({
     where: {
-      id: 1,
+      id: req.user.id,
     },
     include: db.Incomes,
   }).then((income) => {
@@ -16,6 +16,7 @@ router.get('/api/income', (req, res) => {
 });
 
 router.post('/api/income', (req, res) => {
+  req.body.UserId = req.user.id;
   db.Incomes.create(req.body).then((newIncome) => {
     res.json(newIncome);
   });
