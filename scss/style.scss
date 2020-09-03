@@ -64,9 +64,34 @@ h3 {
 }
 
 .sub-header {
-  text-align: center;
-  font-size: large;
+    text-align: center;
+    font-size: large;
+  }
+
+.navbar {
+  background-color: #606c38;
+  position: absolute;
+  top: 0%;
+  max-width: 100%;
+  left: 0%;
+  right: 0%; 
 }
+
+
+.navbar-brand {
+  color: black;
+  padding-right: 20px;
+ }
+ 
+ .nav-link {
+  color: whitesmoke;
+  padding-right: 20px;
+ }
+ 
+ .nav-link :disabled {
+   color: whitesmoke;
+   padding-right: 20px;
+ }
 
 .wrapper {
   display: grid;
@@ -78,14 +103,14 @@ h3 {
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
-  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
 }
 
 .two {
   grid-column: 2 / 2;
-  grid-row: 1/2;
-  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  grid-row: 1/2 ;
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   border-color: #555555;
 }
@@ -102,9 +127,9 @@ h3 {
   grid-row: 2/2;
 }
 
-#beginnerForm {
+#beginnerForm, #income {
   outline-color: black;
-  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
   color: #555555;
@@ -141,6 +166,23 @@ img {
 ul {
   list-style-type: none;
 }
+
+.footer {
+    background-color: #606c38;
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    left:0%;
+    right: 0%;
+  }
+  
+#footerText {
+    color: black !important;
+    text-align: center;
+  }
 
 a {
   color: #FFF;

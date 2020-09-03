@@ -9,13 +9,22 @@ const incomeUl = document.querySelector('#incomes');
 
 fetch('/api/income').then((response) => response.json()).then((data) => {
   const incomes = data[0].Incomes;
-
-  // displays each income to page
   incomes.forEach((income) => {
-    const p = createNode('p');
-    p.innerHTML = `${income.incomeSource} ${income.total}`;
-    append(incomeUl, p);
+    const incomeSection = createNode('ul');
+    for (let i = 0; i < 4; i += 1) {
+      incomeSection.innerHTML = `${income.incomeSource}  : $${income.total}`;
+      append(incomeUl, incomeSection);
+    }
   });
+}).catch((err) => {
+  throw err;
+});
+const totalIncome = document.querySelector('#incomeSum');
+fetch('/api/income/total').then((response) => response.json()).then((data) => {
+  const sumIncome = data[0].total;
+  const displayIncomeSum = createNode('p');
+  displayIncomeSum.innerHTML = `Total : ${sumIncome}`;
+  totalIncome.appendChild(displayIncomeSum);
 }).catch((err) => {
   throw err;
 });
@@ -29,3 +38,13 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
     append(expenseSection, categorySection);
   });
 }).catch((err) => err);
+
+const totalExpenses = document.querySelector('#sum');
+fetch('/api/expenses/total').then((response) => response.json()).then((data) => {
+  const sumExpenses = data[0].total;
+  const displaySum = createNode('p');
+  displaySum.innerHTML = `Total : ${sumExpenses}`;
+  totalExpenses.appendChild(displaySum);
+}).catch((err) => {
+  throw err;
+});
