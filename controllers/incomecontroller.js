@@ -18,7 +18,7 @@ router.get('/api/income', (req, res) => {
 
 router.get('/api/income/total', (req, res) => {
   db.sequelize.query(
-    `SELECT SUM(total) FROM incomes
+    `SELECT SUM(total)  AS total FROM incomes
     inner join users on incomes.UserId = users.id
    WHERE UserId = ?
     ;`,
