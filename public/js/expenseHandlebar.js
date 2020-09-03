@@ -45,19 +45,23 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 }).catch((err) => err);
 
 // posting to API the expenses that the user enters
-const categoryName = document.querySelector('#categoryName');
-document.querySelector('#addExpenses').addEventListener('submit', (event) => {
+
+document.querySelector('#addCategory').addEventListener('click', (event) => {
+  const addedCategory = document.querySelector('#categoryName').value.trim();
   event.preventDefault();
+  console.log('clicked');
   const data = {
-    categoryName,
+    categoryName: addedCategory,
   };
-  fetch('/api/expense-categories/', {
+  console.log(data);
+  fetch('/api/expense-categories', {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
 
     },
+
     body: JSON.stringify(data),
-  });
+  }).then((response) => response.json()).catch((error) => error);
 });
