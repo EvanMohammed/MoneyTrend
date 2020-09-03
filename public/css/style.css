@@ -1,7 +1,6 @@
-/* Here We will be styling the webPages */
 body {
   padding: 20px 80px;
-  background: #eee url(../double-bubble-outline.png);
+  background: #eee url(../images/double-bubble-outline.png);
   font-family: 'Cinzel', serif; }
 
 li {
@@ -22,6 +21,7 @@ button {
   text-align: center;
   text-decoration: none;
   position: relative;
+  outline: none;
   z-index: 1; }
 
 h1 {
@@ -67,16 +67,15 @@ h5 {
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
-  outline-style: double;
-  outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e); }
+  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  border-radius: 2em; }
 
 .two {
   grid-column: 2 / 2;
   grid-row: 1/2;
-  outline-style: double;
-  outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e); }
+  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  border-radius: 2em;
+  border-color: #555555; }
 
 .card {
   row-gap: 5em;
@@ -89,14 +88,11 @@ h5 {
   grid-row: 2/2; }
 
 #beginnerForm {
-  outline-style: double;
   outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e); }
-
-.form-control {
-  outline-style: double;
-  outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e); }
+  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  border-radius: 2em;
+  padding: 2em;
+  color: #555555; }
 
 #balance {
   text-align: end;
@@ -123,6 +119,15 @@ img {
   font-weight: 700;
   margin: 1em;
   border-radius: 0.4em; }
+
+.dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease; }
+
+.dropdown-menu-open {
+  max-height: 200px;
+  transition: all 0.3s ease; }
 
 /* plus minus buttons */
 .plus-minus-input {
@@ -157,12 +162,3 @@ img {
 .plus-minus-input .input-group-field::-webkit-inner-spin-button,
 .plus-minus-input .input-group-field ::-webkit-outer-spin-button {
   appearance: none; }
-
-.dropdown-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease; }
-
-.dropdown-menu-open {
-  max-height: 200px;
-  transition: all 0.3s ease; }
