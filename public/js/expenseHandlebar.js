@@ -1,5 +1,28 @@
-$(document).on('click touchstart', '.dropdown-toggle', () => {
-  $('.dropdown-menu').toggleClass('dropdown-menu-open');
+$(() => {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion'), false);
 });
 
 function createNode(element) {
@@ -9,36 +32,21 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
-const expenseSection = document.querySelector('.expenses');
+const expenseSection = document.querySelector('.accordion');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
+  console.log(data)
   const expenseData = data[0].ExpenseCategories;
-
   expenseData.forEach((category) => {
-    const categorySection = createNode('p');
+    
+    const categorySection = createNode('li');
     for (let i = 0; i < 4; i += 1) {
-      categorySection.innerHTML = `<p class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${category.categoryName}<span class="caret"></span></button>
-      <div class="input-group plus-minus-input">
-      <div class="input-group-button">
-          <button type="button" class="button hollow circle add" data-id="${category.id}"
-              data-field="quantity">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-          </button>
-      </div>
-      </div>
-        <ul class="dropdown-menu">
-          <li>${category.Expenses[i].expenseName}, $${category.Expenses[i].total}
-          <div class="input-group plus-minus-input">
-          <div class="input-group-button">
-              <button type="button" class="button hollow circle delete" data-id="${category.Expenses[i].id}"
-                  data-field="quantity">
-                  <i class="fa fa-minus" aria-hidden="true"></i>
-              </button>
-          </div>
-          </div>
-          </li>  
-        </ul>
-    </p>`;
+      categorySection.innerHTML = `
+      <div class="link">${category.categoryName}<i class="fa fa-plus" data-id="${category.id} aria-hidden="true"></i><i class="fa fa-chevron-down"></i></div>
+      <ul class="submenu">
+        <li><a href="#">${category.Expenses[i].expenseName}, $${category.Expenses[i].total}</a><i class="fa fa-minus" data-id="${category.Expenses[i].id}" aria-hidden="true"></i></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+      </ul>`;
       append(expenseSection, categorySection);
     }
   });
@@ -46,10 +54,11 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 
 // posting to API the expenses that the user enters
 const categoryName = document.querySelector('#categoryName');
-document.querySelector('#addExpenses').addEventListener('submit', (event) => {
+document.querySelector('#addCategory').addEventListener('submit', (event) => {
   event.preventDefault();
   const data = {
-    categoryName,
+    categoryName: categoryName.value,
+    UserId: 1,
   };
   fetch('/api/expense-categories/', {
     method: 'POST',
