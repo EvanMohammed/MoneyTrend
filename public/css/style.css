@@ -56,9 +56,8 @@ h3 {
 
 .sub-header {
   text-align: center;
-  font-size: large; 
-  padding-bottom: 2em;
-}
+  font-size: large;
+  padding-bottom: 2em; }
 
 .navbar {
   background-color: #606c38;
@@ -91,8 +90,7 @@ h3 {
   grid-column: 1 / 2;
   grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
-  border-radius: 2em; 
-}
+  border-radius: 2em; }
 
 .two {
   grid-column: 2 / 2;
@@ -100,9 +98,8 @@ h3 {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
-  .card-footer {
-    position: absolute;
-   }
+.card-footer {
+  position: absolute; }
 
 .three {
   grid-column: 2/2;
@@ -137,8 +134,29 @@ img {
   margin: 1em;
   border-radius: 0.4em;
   position: absolute;
-  right: 0px;
-}
+  right: 0px; }
+
+#balance {
+  text-align: end;
+  font-size: 30px; }
+
+img {
+  margin-top: 1%;
+  border-image-slice: bevel;
+  border-radius: 30px 0 30px 0;
+  margin-left: 40%; }
+
+/* style the a tags that navigate pages */
+.pageNavigation {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: white;
+  padding: 0.5em;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  margin: 1em;
+  border-radius: 0.4em; }
 
 /* accordion dropdown styling*/
 ul {
@@ -162,15 +180,6 @@ ul {
 a {
   color: #FFF;
   text-decoration: none; }
-
-.accordion {
-  width: 100%;
-  max-width: 360px;
-  margin: 30px auto 20px;
-  background: #dda15e;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px; }
 
 .accordion .link {
   cursor: pointer;
@@ -205,6 +214,16 @@ a {
 
 .accordion li.open i.fa-minus {
   color: #b63b4d; }
+
+.accordion li.open i.fa-minus:hover {
+  color: #e20a0a; }
+
+.accordion li.open i.fa-plus {
+  color: #14690c; }
+
+.accordion li.open i.fa-plus:hover {
+  color: #1f9e13;
+  font-size: 22px; }
 
 .accordion li.open .link {
   color: black; }
