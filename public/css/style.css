@@ -77,17 +77,41 @@ h3 {
   border-radius: 2em;
   border-color: #555555; }
 
-.card {
+/* .card {
   row-gap: 5em;
   outline-style: double;
   outline-color: black;
-  background-color: #b1dab1; }
+  background-color: #b1dab1; } */
 
 .three {
   grid-column: 2/2;
   grid-row: 2/2; }
 
-#beginnerForm {
+.navbar {
+  background-color: #606c38;
+  position: absolute;
+  top: 0%;
+  max-width: 100%;
+  left: 0%;
+  right: 0%; 
+  }
+
+.navbar-brand {
+ color: black;
+ padding-right: 20px;
+}
+
+.nav-link {
+ color: whitesmoke;
+ padding-right: 20px;
+}
+
+.nav-link :disabled {
+  color: whitesmoke;
+  padding-right: 20px;
+}
+
+#beginnerForm, #income {
   outline-color: black;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;

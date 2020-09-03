@@ -62,10 +62,35 @@ h3 {
     font-size: 2em;
   }
 
-  .sub-header {
+.sub-header {
     text-align: center;
     font-size: large;
   }
+
+.navbar {
+  background-color: #606c38;
+  position: absolute;
+  top: 0%;
+  max-width: 100%;
+  left: 0%;
+  right: 0%; 
+}
+
+
+.navbar-brand {
+  color: black;
+  padding-right: 20px;
+ }
+ 
+ .nav-link {
+  color: whitesmoke;
+  padding-right: 20px;
+ }
+ 
+ .nav-link :disabled {
+   color: whitesmoke;
+   padding-right: 20px;
+ }
 
 .wrapper {
   display: grid;
@@ -101,7 +126,7 @@ h3 {
   grid-row: 2/2;
 }
 
-#beginnerForm {
+#beginnerForm, #income {
   outline-color: black;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
@@ -140,7 +165,7 @@ img{
 ul {
   list-style-type: none; }
 
-  .footer {
+.footer {
     background-color: #606c38;
     position: fixed;
     bottom: 0;
@@ -152,7 +177,7 @@ ul {
     right: 0%;
   }
   
-  #footerText {
+#footerText {
     color: black !important;
     text-align: center;
   }
