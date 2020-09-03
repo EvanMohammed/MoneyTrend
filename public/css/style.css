@@ -1,8 +1,7 @@
 body {
   padding: 20px 80px;
   background: #eee url(../images/double-bubble-outline.png);
-  font-family: 'Cinzel', serif; 
-}
+  font-family: 'Cinzel', serif; }
 
 li {
   padding: 5px;
@@ -99,40 +98,6 @@ h3 {
   text-align: end;
   font-size: 30px; }
 
-ul {
-    margin-top: 1%;
-    margin-top: 20px;
-  }
-
-
-.footer {
-  background-color: #606c38;
-  position: fixed;
-  bottom: 0;
-  height: 30px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  left:0%;
-  right: 0%;
-}
-
-#footerText {
-  color: black !important;
-  text-align: center;
-}
-  
-  @font-face {
-    font-family: 'typicons';
-    src: url("path/to/typicons.eot");
-    src: url("path/to/typicons.eot?#iefix") format('embedded-opentype'),
-         url("path/to/typicons.woff") format('woff'),
-         url("path/to/typicons.ttf") format('truetype'),
-         url("path/to/typicons.svg#typicons") format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-
 img {
   margin-top: 1%;
   border-image-slice: bevel;
@@ -154,6 +119,21 @@ img {
 /* accordion dropdown styling*/
 ul {
   list-style-type: none; }
+
+.footer {
+  background-color: #606c38;
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  left: 0%;
+  right: 0%; }
+
+#footerText {
+  color: black !important;
+  text-align: center; }
 
 a {
   color: #FFF;
