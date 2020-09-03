@@ -5,7 +5,6 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
-
 const incomeUl = document.querySelector('#incomes');
 
 fetch('/api/income').then((response) => response.json()).then((data) => {
