@@ -22,6 +22,7 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
 
 const expenseSection = document.querySelector('#expenses');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
+  console.log(data);
   const expenseData = data[0].ExpenseCategories;
   expenseData.forEach((category) => {
     const categorySection = createNode('ul');
