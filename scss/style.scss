@@ -5,30 +5,29 @@ body {
 }
 
 li {
-  padding: 5px;
-  margin: 5px;
-}
-
+    padding: 5px;
+    margin: 5px;
+  }
+  
 .label {
-  font-weight: bold;
-}
-
+    font-weight: bold;
+  }
+  
 button {
-  margin-top: 1%;
-  font-weight: 800;
-  display: block;
-  background: #FFF;
-  padding: 2px 10px;
-  color: rgb(40, 54, 24);
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  outline: none;
-  z-index: 1;
-
-}
-
+    margin-top: 1%;
+    font-weight: 800;
+    display: block;
+    background: #FFF;
+    padding: 2px 10px;
+    color: rgb(40, 54, 24);
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    outline:none;
+    z-index: 1;
+    
+  }
 h1 {
     text-align: center;
     margin-top: 1%;
@@ -46,23 +45,23 @@ h1 {
   }
 
 h2 {
-  text-align: center;
-  margin-top: 1%;
-  color: rgb(96, 108, 56);
-  text-decoration: none;
-  font-size: 50px;
-  font-weight: 800;
-  letter-spacing: 0px;
-  line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
-  position: relative;
-}
+    text-align: center;
+    margin-top: 1%;
+    color: rgb(96, 108, 56);
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 1;
+    text-shadow: #EDEDED 3px 2px 0;
+    position: relative;
+  }
 
 
 h3 {
-  text-align: center;
-  font-size: 2em;
-}
+    text-align: center;
+    font-size: 2em;
+  }
 
 .sub-header {
     text-align: center;
@@ -108,7 +107,7 @@ h3 {
   border-radius: 2em;
 }
 
-.two {
+.two { 
   grid-column: 2 / 2;
   grid-row: 1/2 ;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
@@ -137,21 +136,21 @@ h3 {
 }
 
 #balance {
-  text-align: end;
-  font-size: 30px;
-}
+    text-align: end;
+    font-size: 30px;
+  }
+  
+img{
+    margin-top: 1%;
+    border-image-slice: bevel;
+    border-radius:30px 0 30px 0;
+    margin-left: 40%;
+  }
 
-img {
-  margin-top: 1%;
-  border-image-slice: bevel;
-  border-radius: 30px 0 30px 0;
-  margin-left: 40%;
-}
+  
+ /* style the a tags that navigate pages */
 
-
-/* style the a tags that navigate pages */
-
-.pageNavigation {
+ .pageNavigation {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -161,12 +160,11 @@ img {
   font-weight: 700;
   margin: 1em;
   border-radius: 0.4em;
-}
+ }
 
-/* accordion dropdown styling*/
+/* accordion dropdown styling*/ 
 ul {
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .footer {
     background-color: #606c38;
@@ -187,8 +185,16 @@ ul {
 
 a {
   color: #FFF;
-  text-decoration: none;
-}
+  text-decoration: none; }
+
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #dda15e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
 
 .accordion .link {
   cursor: pointer;
@@ -201,12 +207,10 @@ a {
   position: relative;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
+  transition: all 0.4s ease; }
 
 .accordion li:last-child .link {
-  border-bottom: 0;
-}
+  border-bottom: 0; }
 
 .accordion li i {
   position: absolute;
@@ -216,46 +220,27 @@ a {
   color: #FFF;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
+  transition: all 0.4s ease; }
 
 .accordion li i.fa-chevron-down {
   right: 12px;
   left: auto;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 .accordion li.open i.fa-minus {
-  color: #b63b4d;
-}
-
-.accordion li.open i.fa-minus:hover {
-  color: #e20a0a;
-}
-
-.accordion li.open i.fa-plus {
-  color: #14690c;
-}
-
-.accordion li.open i.fa-plus:hover {
-  color: #1f9e13;
-  font-size: 22px;
-}
+    color: #b63b4d; }
 
 .accordion li.open .link {
-  color: black;
-}
+  color: black; }
 
 .accordion li.open i.fa-chevron-down {
-  color: black;
-}
+  color: black; }
 
 .accordion li.open i.fa-chevron-down {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
+  transform: rotate(180deg); }
 
 /**
  * Submenu
@@ -263,8 +248,7 @@ a {
 .submenu {
   display: none;
   background: #FFF;
-  font-size: 1.2em;
-}
+  font-size: 1.2em; }
 
 .submenu a {
   display: block;
@@ -275,9 +259,7 @@ a {
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  position: relative;
-}
+  position: relative; }
 
 .accordion li.open i.fa-chevron-down {
-  color: #b63b4d;
-}
+    color: #b63b4d; }
