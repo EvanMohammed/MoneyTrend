@@ -1,4 +1,6 @@
 const express = require('express');
+// const sequelize = require('sequelize');
+const { QueryTypes } = require('sequelize');
 
 const router = express.Router();
 
@@ -15,6 +17,21 @@ router.get('/api/expenses', (req, res) => {
     },
   }).then((expenseInfo) => {
     res.json(expenseInfo);
+  });
+});
+
+router.get('/api/expenses/total', (req, res) => {
+  db.sequelize.query(
+    `SELECT SUM(total) FROM expenses
+      inner join expensecategories on expenses.ExpenseCategoryId = expensecategories.id 
+      WHERE UserId = ?
+      ;`,
+    {
+      replacements: [req.user.id],
+      type: QueryTypes.SELECT,
+    },
+  ).then((data) => {
+    res.json(data);
   });
 });
 
