@@ -82,21 +82,21 @@ document.querySelector('#addCategory').addEventListener('click', (event) => {
 
 getExpenseData();
 
-document.addEventListener('click',function(e){
-  if(e.target && e.target.id == 'deleteItem'){
-        let id = e.target.getAttribute("data-id");
-        fetch(`/api/expense-items/${id}`, {
-          method: 'DELETE',
-          credentials: 'same-origin',
-        }).then(() => {
-          window.location.reload();
-        });
-   }
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'deleteItem') {
+    const id = e.target.getAttribute('data-id');
+    fetch(`/api/expense-items/${id}`, {
+      method: 'DELETE',
+      credentials: 'same-origin',
+    }).then(() => {
+      window.location.reload();
+    });
+  }
 });
 
-document.addEventListener('click',function(e){
+document.addEventListener('click', (e) => {
   const submenu = document.querySelectorAll('.submenu:first-child')[0];
-  if(e.target && e.target.id == 'addItem') {
-    submenu.innerHTML = `<input></input>`
+  if (e.target && e.target.id === 'addItem') {
+    submenu.innerHTML = '<input></input>';
   }
 });
