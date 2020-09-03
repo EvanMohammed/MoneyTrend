@@ -7,22 +7,17 @@ li {
   padding: 5px;
   margin: 5px; }
 
+.btn-default {
+  box-shadow: 2px 2px 2px whitesmoke;
+  font-family: 'Cinzel', serif;
+  background: whitesmoke;
+  padding: 0.6em;
+  border-radius: 0.3em;
+  box-shadow: antiquewhite;
+  border: none; }
+
 .label {
   font-weight: bold; }
-
-button {
-  margin-top: 1%;
-  font-weight: 800;
-  display: block;
-  background: #FFF;
-  padding: 2px 10px;
-  color: #283618;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  outline: none;
-  z-index: 1; }
 
 h1 {
   text-align: center;
@@ -57,7 +52,28 @@ h3 {
 
 .sub-header {
   text-align: center;
-  font-size: large; }
+  font-size: large;
+  padding-bottom: 30px; }
+
+.navbar {
+  background-color: #606c38;
+  position: absolute;
+  top: 0%;
+  max-width: 100%;
+  left: 0%;
+  right: 0%; }
+
+.navbar-brand {
+  color: black;
+  padding-right: 20px; }
+
+.nav-link {
+  color: whitesmoke;
+  padding-right: 20px; }
+
+.nav-link :disabled {
+  color: whitesmoke;
+  padding-right: 20px; }
 
 .wrapper {
   display: grid;
@@ -78,39 +94,15 @@ h3 {
   border-radius: 2em;
   border-color: #555555; }
 
-/* .card {
+.card {
   row-gap: 5em;
   outline-style: double;
   outline-color: black;
-  background-color: #b1dab1; } */
+  background-color: #b1dab1; }
 
 .three {
   grid-column: 2/2;
   grid-row: 2/2; }
-
-.navbar {
-  background-color: #606c38;
-  position: absolute;
-  top: 0%;
-  max-width: 100%;
-  left: 0%;
-  right: 0%; 
-  }
-
-.navbar-brand {
- color: black;
- padding-right: 20px;
-}
-
-.nav-link {
- color: whitesmoke;
- padding-right: 20px;
-}
-
-.nav-link :disabled {
-  color: whitesmoke;
-  padding-right: 20px;
-}
 
 #beginnerForm, #income {
   outline-color: black;
@@ -130,17 +122,6 @@ img {
   margin-left: 40%; }
 
 /* style the a tags that navigate pages */
-.pageNavigation {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: white;
-  padding: 0.5em;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  margin: 1em;
-  border-radius: 0.4em; }
-
 /* accordion dropdown styling*/
 ul {
   list-style-type: none; }
@@ -159,10 +140,6 @@ ul {
 #footerText {
   color: black !important;
   text-align: center; }
-
-a {
-  color: #FFF;
-  text-decoration: none; }
 
 .accordion {
   width: 100%;
