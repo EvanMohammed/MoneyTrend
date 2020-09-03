@@ -36,6 +36,7 @@ h1 {
   letter-spacing: 0px;
   line-height: 1;
   text-shadow: #EDEDED 3px 2px 0;
+  padding-top: 40px;
   position: relative; }
 
 h2 {
@@ -58,6 +59,26 @@ h3 {
   text-align: center;
   font-size: large; }
 
+.navbar {
+  background-color: #606c38;
+  position: absolute;
+  top: 0%;
+  max-width: 100%;
+  left: 0%;
+  right: 0%; }
+
+.navbar-brand {
+  color: black;
+  padding-right: 20px; }
+
+.nav-link {
+  color: whitesmoke;
+  padding-right: 20px; }
+
+.nav-link :disabled {
+  color: whitesmoke;
+  padding-right: 20px; }
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,39 +98,15 @@ h3 {
   border-radius: 2em;
   border-color: #555555; }
 
-/* .card {
+.card {
   row-gap: 5em;
   outline-style: double;
   outline-color: black;
-  background-color: #b1dab1; } */
+  background-color: #b1dab1; }
 
 .three {
   grid-column: 2/2;
   grid-row: 2/2; }
-
-.navbar {
-  background-color: #606c38;
-  position: absolute;
-  top: 0%;
-  max-width: 100%;
-  left: 0%;
-  right: 0%; 
-  }
-
-.navbar-brand {
- color: black;
- padding-right: 20px;
-}
-
-.nav-link {
- color: whitesmoke;
- padding-right: 20px;
-}
-
-.nav-link :disabled {
-  color: whitesmoke;
-  padding-right: 20px;
-}
 
 #beginnerForm, #income {
   outline-color: black;
