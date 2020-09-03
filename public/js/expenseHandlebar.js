@@ -11,15 +11,16 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 
   expenses.forEach((expense) => {
     const p = createNode('p');
-
-    p.innerHTML = `<p><a href="#"> <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${expense.categoryName}
-        <span class="caret"></span></button>
-    <ul class="dropdown-menu">
- <li>${expense.Expenses[0].expenseName}</li>
-    </ul>
-</div></a></p>`;
-    append(expenseHandlebarUl, p);
+    for (let i = 0; i < expenses.length; i += 1) {
+      p.innerHTML = `<p><a href="#"> <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${expense.categoryName}
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <li>${expense.Expenses[0].expenseName} Cost :  ${expense.Expenses[0].total}</li>
+      </ul>
+      </div></a></p>`;
+      append(expenseHandlebarUl, p);
+    }
   });
   $('.dropdown-toggle').on('click touchstart', () => {
     $('.dropdown-menu').toggleClass('dropdown-menu-open');
@@ -27,13 +28,14 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 }).catch((err) => err);
 
 // posting to API the expenses that the user enters
-const categoryName = document.querySelector('#categoryName');
-document.querySelector('#addExpenses').addEventListener('submit', (event) => {
+
+const addedCategory = document.querySelector('#categoryName').value.trim();
+document.querySelector('#addCategory').addEventListener('submit', (event) => {
   event.preventDefault();
   const data = {
-    categoryName,
+    categoryName: addedCategory,
   };
-  fetch('/api/expense-categories/', {
+  fetch('/api/expense-categories', {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
@@ -41,11 +43,8 @@ document.querySelector('#addExpenses').addEventListener('submit', (event) => {
 
     },
     body: JSON.stringify(data),
-  });
+  }).then((response) => response.json()).catch((error) => error);
 });
-// const createExpenseCategory = () => {
-
-// };
 
 // eslint-disable-next-line no-unused-vars
 
