@@ -34,10 +34,8 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
   const expenseData = data[0].ExpenseCategories;
   expenseData.forEach((category) => {
     const categorySection = createNode('ul');
-    for (let i = 0; i < 4; i += 1) {
-      categorySection.innerHTML = `${category.categoryName}`;
-      append(expenseSection, categorySection);
-    }
+    categorySection.innerHTML = `${category.categoryName}`;
+    append(expenseSection, categorySection);
   });
 }).catch((err) => err);
 
