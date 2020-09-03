@@ -35,8 +35,10 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
   const expenseData = data[0].ExpenseCategories;
   expenseData.forEach((category) => {
     const categorySection = createNode('ul');
-    categorySection.innerHTML = `${category.categoryName}`;
-    append(expenseSection, categorySection);
+    for (let i = 0; i < 4; i += 1) {
+      categorySection.innerHTML = `${category.categoryName}`;
+      append(expenseSection, categorySection);
+    }
   });
 }).catch((err) => err);
 
@@ -61,7 +63,4 @@ Promise.all([
   const displayBalance = createNode('p');
   displayBalance.innerHTML = `Current Balance : ${currentBalance}`;
   totalBalance.appendChild(displayBalance);
-  console.log(currentBalance);
-}).catch((error) => {
-  console.log(error);
-});
+}).catch((error) => error);
