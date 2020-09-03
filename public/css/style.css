@@ -51,9 +51,9 @@ h2 {
   text-shadow: #EDEDED 3px 2px 0;
   position: relative; }
 
-h5 {
+h3 {
   text-align: center;
-  font-size: medium; }
+  font-size: 2em; }
 
 .sub-header {
   text-align: center;
@@ -151,45 +151,87 @@ img {
   margin: 1em;
   border-radius: 0.4em; }
 
-.dropdown-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease; }
+/* accordion dropdown styling*/
+ul {
+  list-style-type: none; }
 
-.dropdown-menu-open {
-  max-height: 200px;
-  transition: all 0.3s ease; }
+a {
+  color: #FFF;
+  text-decoration: none; }
 
-/* plus minus buttons */
-.plus-minus-input {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #dda15e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
 
-.plus-minus-input .input-group-field {
-  text-align: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 1rem; }
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 42px;
+  color: #FFF;
+  font-size: 1.5em;
+  font-weight: 700;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
 
-.plus-minus-input .input-group-field::-webkit-inner-spin-button,
-.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none; }
+.accordion li:last-child .link {
+  border-bottom: 0; }
 
-.plus-minus-input .input-group-button .circle {
-  border-radius: 50%;
-  padding: 0.25em 0.2em; }
+.accordion li i {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  font-size: 18px;
+  color: #FFF;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
 
-.plus-minus-input {
-  align-items: center; }
+.accordion li i.fa-chevron-down {
+  right: 12px;
+  left: auto;
+  font-size: 16px; }
 
-.plus-minus-input .input-group-field {
-  text-align: center;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  padding: 1rem; }
+.accordion li.open i.fa-minus {
+  color: #b63b4d; }
 
-.plus-minus-input .input-group-field::-webkit-inner-spin-button,
-.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
-  appearance: none; }
+.accordion li.open .link {
+  color: black; }
+
+.accordion li.open i.fa-chevron-down {
+  color: black; }
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+/**
+ * Submenu
+ -----------------------------*/
+.submenu {
+  display: none;
+  background: #FFF;
+  font-size: 1.2em; }
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+  padding-left: 42px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  position: relative; }
+
+.accordion li.open i.fa-chevron-down {
+  color: #b63b4d; }
