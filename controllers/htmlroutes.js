@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.get('/', (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render('landing');
+      res.render('home');
     }
     res.render('signup', { layout: false });
   });
@@ -13,7 +13,7 @@ module.exports = function (app) {
   app.get('/login', (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render('landing');
+      res.render('home');
     }
     res.render('login', { layout: false });
   });
@@ -21,7 +21,15 @@ module.exports = function (app) {
   /* Here we've add our isAuthenticated middleware to this route.
   If a user who is not logged in tries to access
   this route they will be redirected to the signup page */
-  app.get('/members', isAuthenticated, (req, res) => {
-    res.render('landing');
+  app.get('/home', isAuthenticated, (req, res) => {
+    res.render('home');
+  });
+
+  app.get('/expenses', isAuthenticated, (req, res) => {
+    res.render('expenses', { layout: 'drilldown' });
+  });
+
+  app.get('/income', isAuthenticated, (req, res) => {
+    res.render('income', { layout: 'drilldown' });
   });
 };

@@ -1,57 +1,38 @@
-// // clicking expenses button to POST to expenses API
-
-// document.querySelector('').addEventListener('submit', function (event) {
-//     console.log('Expenses clicked');
-//     event.preventDefault();
-//     let addedExpenses = {
-//         number: document.getElementById('').value.trim(),
-//         storeMoney: document.querySelector('').value.trim()
-//     }
-//     let catId = {
-
-//     }
-
-//     fetch('api/expenses', {
-//         method: 'POST',
-//         body: JSON.stringify({
-//             expenseName:
-//             total: addedExpenses,
-//             expenseCategoryId:
-//         })
-//     }).then(function (response) {
-//         response.json();
-//     }).then(function (data) {
-//         console.log("added Expenses :", data.html_url);
-//         console.log(json)
-//         // location.reload()
-//     }).catch(err => {
-//         return err;
-
-//     })
-// })
 // clicking expenses button to retrieve expenses data
+function createNode(element) {
+  return document.createElement(element);
+}
 
-// document.getElementById('expensesBtn').addEventListener('click', (event) => {
-//   console.log('expenses clicked');
-//   event.preventDefault();
-//   fetch('api/expenses', { method: 'GET' });
-// });
-// eslint-disable-next-line no-unused-vars
-const createExpenseCategory = () => {
-  const data = {
-    categoryName: 'shopping',
-    UserId: 1,
-  };
-  fetch('/api/expense-categories/', {
-    method: 'POST',
-    credentials: 'same-origin',
-    headers: {
-      'Content-Type': 'application/json',
-
-    },
-    body: JSON.stringify(data),
+function append(parent, el) {
+  return parent.appendChild(el);
+}
+const expenseUl = document.querySelector('#expenses');
+fetch('/api/expenses').then((response) => response.json()).then((data) => {
+  const expneses = data[0].ExpenseCategories;
+  expneses.forEach((expense) => {
+    const p = createNode('p');
+    for (let i = 0; i < 4; i += 1) {
+      p.innerHTML = `Expense Category : ${expense.categoryName}  Expense Detail: ${expense.Expenses[i].expenseName} --- ${expense.Expenses[i].total}`;
+      append(expenseUl, p);
+    }
   });
-};
+}).catch((err) => err);
+
+// const createExpenseCategory = () => {
+//   const data = {
+//     categoryName: 'shopping',
+//     UserId: 1,
+//   };
+//   fetch('/api/expense-categories/', {
+//     method: 'POST',
+//     credentials: 'same-origin',
+//     headers: {
+//       'Content-Type': 'application/json',
+
+//     },
+//     body: JSON.stringify(data),
+//   });
+// };
 
 // eslint-disable-next-line no-unused-vars
 const createExpenseItem = () => {
