@@ -1,17 +1,20 @@
 <h3>My Monthly Expenses</h3>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<ul id="accordion" class="accordion">
-
-</ul>
-<div class="card-footer">
-
-    <div class="input-group">
-        <input type="text" class="form-control" id='categoryName'
-            aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
-        <div class="input-group-append" id="button-addon4">
-            <button class="btn btn-outline-secondary" id="addCategory" type="button">Add Category</button>
+<div class="wrapper">
+    <div class="one">
+    <form>
+        <div class="input-group">
+            <input type="text" class="form-control" id='categoryName'>
+            <div class="input-group-append">
+                <button class="btn" id="addCategory" type="button">Add Category</button>
+            </div>
         </div>
+    </form>
+    </div>
+
+    <div class="two">
+        <ul id="accordion" class="accordion">
+
+        </ul>
     </div>
 </div>
-
 <script src="./js/expenseHandlebar.js"></script>
