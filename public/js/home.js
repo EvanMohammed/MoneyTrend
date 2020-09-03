@@ -10,7 +10,6 @@ const incomeUl = document.querySelector('#incomes');
 fetch('/api/income').then((response) => response.json()).then((data) => {
   const incomes = data[0].Incomes;
   incomes.forEach((income) => {
-    console.log(income);
     const incomeSection = createNode('ul');
     for (let i = 0; i < 4; i += 1) {
       incomeSection.innerHTML = `${income.incomeSource}  : $${income.total}`;
@@ -22,13 +21,13 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
 });
 const totalIncome = document.querySelector('#incomeSum');
 fetch('/api/income/total').then((response) => response.json()).then((data) => {
-  let sumIncome = data[0].total;
+  const sumIncome = data[0].total;
   const displayIncomeSum = createNode('p');
   displayIncomeSum.innerHTML = `Total : ${sumIncome}`;
   totalIncome.appendChild(displayIncomeSum);
 }).catch((err) => {
   throw err;
-})
+});
 
 const expenseSection = document.querySelector('#expenses');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
@@ -44,12 +43,10 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 
 const totalExpenses = document.querySelector('#sum');
 fetch('/api/expenses/total').then((response) => response.json()).then((data) => {
-  let sumExpenses = data[0].total;
+  const sumExpenses = data[0].total;
   const displaySum = createNode('p');
   displaySum.innerHTML = `Total : ${sumExpenses}`;
   totalExpenses.appendChild(displaySum);
 }).catch((err) => {
   throw err;
-})
-
-
+});

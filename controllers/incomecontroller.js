@@ -27,7 +27,6 @@ router.get('/api/income/total', (req, res) => {
       type: QueryTypes.SELECT,
     },
   ).then((data) => {
-    console.log(data)
     res.json(data);
   });
 });
