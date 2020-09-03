@@ -5,7 +5,7 @@ module.exports = function (app) {
   app.get('/', (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render('landing');
+      res.render('home');
     }
     res.render('signup', { layout: false });
   });
@@ -13,7 +13,7 @@ module.exports = function (app) {
   app.get('/login', (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.render('landing');
+      res.render('home');
     }
     res.render('login', { layout: false });
   });
@@ -22,14 +22,14 @@ module.exports = function (app) {
   If a user who is not logged in tries to access
   this route they will be redirected to the signup page */
   app.get('/home', isAuthenticated, (req, res) => {
-    res.render('landing');
+    res.render('home');
   });
 
   app.get('/expenses', isAuthenticated, (req, res) => {
-    res.render('expenses');
+    res.render('expenses', { layout: 'drilldown' });
   });
 
   app.get('/income', isAuthenticated, (req, res) => {
-    res.render('income');
+    res.render('income', { layout: 'drilldown' });
   });
 };

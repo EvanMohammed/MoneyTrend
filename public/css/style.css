@@ -1,144 +1,115 @@
-/* Here We will be styling the webPages */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
-@import url(https://fonts.googleapis.com/css?family=Squada+One);
 body {
   padding: 20px 80px;
-  background: #eee url(../double-bubble-outline.png);
-  font-family: 'Cinzel', serif;
-}
-
+  background: #eee url(../images/double-bubble-outline.png);
+  font-family: 'Cinzel', serif; }
 
 li {
-    padding: 5px;
-    margin: 5px;
-  }
-  
+  padding: 5px;
+  margin: 5px; }
+
 .label {
-    font-weight: bold;
-  }
-  
+  font-weight: bold; }
+
 button {
-    margin-top: 1%;
-    font-weight: 800;
-    display: block;
-    background: #FFF;
-    padding: 2px 10px;
-    color: rgb(40, 54, 24);
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-    
-  }
+  margin-top: 1%;
+  font-weight: 800;
+  display: block;
+  background: #FFF;
+  padding: 2px 10px;
+  color: #283618;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+  z-index: 1; }
+
 h1 {
-    text-align: center;
-    margin-top: 1%;
-    font-family: 'Cinzel', serif;
-    font-weight: 800;
-    color: rgb(56, 75, 34);
-    text-decoration: none;
-    font-size: 100px;
-    font-weight: 800;
-    letter-spacing: 0px;
-    line-height: 1;
-    text-shadow: #EDEDED 3px 2px 0;
-    position: relative;
-  }
+  text-align: center;
+  margin-top: 1%;
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  color: #384b22;
+  text-decoration: none;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative; }
 
 h2 {
-    text-align: center;
-    margin-top: 1%;
-    color: rgb(96, 108, 56);
-    text-decoration: none;
-    font-size: 50px;
-    font-weight: 800;
-    letter-spacing: 0px;
-    line-height: 1;
-    text-shadow: #EDEDED 3px 2px 0;
-    position: relative;
-  }
-
+  text-align: center;
+  margin-top: 1%;
+  color: #606c38;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative; }
 
 h5 {
-    text-align: center;
-    font-size: medium;
-  }
+  text-align: center;
+  font-size: medium; }
 
-  .sub-header {
-    text-align: center;
-    font-size: large;
-  }
+.sub-header {
+  text-align: center;
+  font-size: large; }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
+  grid-auto-rows: minmax(100px, auto); }
 
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
-  outline-style: double;
-  outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e);
-}
+  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  border-radius: 2em; }
 
-.two { 
+.two {
   grid-column: 2 / 2;
-  grid-row: 1/2 ;
-  outline-style: double;
-  outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e);
-
-}
+  grid-row: 1/2;
+  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  border-radius: 2em;
+  border-color: #555555; }
 
 .card {
   row-gap: 5em;
   outline-style: double;
   outline-color: black;
-  background-color: rgb(177, 218, 177)
-}
+  background-color: #b1dab1; }
 
 .three {
   grid-column: 2/2;
-  grid-row: 2/2;
-}
+  grid-row: 2/2; }
 
 #beginnerForm {
-  outline-style: double;
   outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e);
-}
-
-.form-control {
-  outline-style: double;
-  outline-color: black;
-  background: -webkit-radial-gradient(#bc6c25, #dda15e);
-}
+  background: -webkit-radial-gradient(#dda15e, #bc6c25);
+  border-radius: 2em;
+  padding: 2em;
+  color: #555555; }
 
 #balance {
-    text-align: end;
-    font-size: 30px;
-  }
+  text-align: end;
+  font-size: 30px; }
 
 ul {
-    margin-top: 1%;
-    margin-top: 20px;
-  }
-  
-img{
-    margin-top: 1%;
-    border-image-slice: bevel;
-    border-radius:30px 0 30px 0;
-    margin-left: 40%;
-  }
+  margin-top: 1%;
+  margin-top: 20px; }
 
-  
- /* style the a tags that navigate pages */
+img {
+  margin-top: 1%;
+  border-image-slice: bevel;
+  border-radius: 30px 0 30px 0;
+  margin-left: 40%; }
 
- .pageNavigation {
+/* style the a tags that navigate pages */
+.pageNavigation {
   color: black;
   text-decoration: none;
   text-transform: uppercase;
@@ -147,15 +118,47 @@ img{
   font-family: 'Open Sans';
   font-weight: 700;
   margin: 1em;
-  border-radius: 0.4em;
- }
- .dropdown-menu {
+  border-radius: 0.4em; }
+
+.dropdown-menu {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-}
+  transition: all 0.3s ease; }
 
 .dropdown-menu-open {
   max-height: 200px;
-  transition: all 0.3s ease;
-}
+  transition: all 0.3s ease; }
+
+/* plus minus buttons */
+.plus-minus-input {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.plus-minus-input .input-group-field {
+  text-align: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 1rem; }
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none; }
+
+.plus-minus-input .input-group-button .circle {
+  border-radius: 50%;
+  padding: 0.25em 0.2em; }
+
+.plus-minus-input {
+  align-items: center; }
+
+.plus-minus-input .input-group-field {
+  text-align: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 1rem; }
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+  appearance: none; }

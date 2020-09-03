@@ -32,7 +32,7 @@ app.use(passport.session());
 // Requiring our routes
 app.use(expenseAPI);
 app.use(incomeAPI);
-require('./controllers/authenticationroutes.js')(app);
+require('./controllers/htmlroutes.js')(app);
 require('./controllers/authenticationcontroller.js')(app);
 
 // Syncing our database and logging a message to the user upon success
