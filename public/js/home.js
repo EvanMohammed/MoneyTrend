@@ -5,6 +5,7 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
+
 const incomeUl = document.querySelector('#incomes');
 
 fetch('/api/income').then((response) => response.json()).then((data) => {
@@ -49,4 +50,20 @@ fetch('/api/expenses/total').then((response) => response.json()).then((data) => 
   totalExpenses.appendChild(displaySum);
 }).catch((err) => {
   throw err;
+});
+
+const totalBalance = document.querySelector('#balance');
+Promise.all([
+  fetch('/api/expenses/total'),
+  fetch('/api/income/total'),
+]).then((responses) => Promise.all(responses.map((response) => response.json()))).then((data) => {
+  const totalExp = data[0][0].total;
+  const totalInc = data[1][0].total;
+  const currentBalance = totalInc - totalExp;
+  const displayBalance = createNode('p');
+  displayBalance.innerHTML = `Current Balance : ${currentBalance}`;
+  totalBalance.appendChild(displayBalance);
+  console.log(currentBalance);
+}).catch((error) => {
+  console.log(error);
 });
