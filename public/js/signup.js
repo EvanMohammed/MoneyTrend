@@ -5,7 +5,7 @@ $(document).ready(() => {
   const passwordInput = $('input#password-input');
 
   function handleLoginErr(err) {
-    $('#alert .msg').text(err.responseJSON);
+    $('#alert .msg').text(err.responseJSON.errors[0].message);
     $('#alert').fadeIn(500);
   }
   // Does a post to the signup route. If successful, we are redirected to the members page

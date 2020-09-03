@@ -88,22 +88,13 @@ h3 {
 
 .one {
   grid-column: 1 / 2;
-  grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
 .two {
   grid-column: 2 / 2;
-  grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
-
-.card-footer {
-  position: absolute; }
-
-.three {
-  grid-column: 2/2;
-  grid-row: 2/2; }
 
 #beginnerForm {
   outline-color: black;
@@ -145,18 +136,6 @@ img {
   border-image-slice: bevel;
   border-radius: 30px 0 30px 0;
   margin-left: 40%; }
-
-/* style the a tags that navigate pages */
-.pageNavigation {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: white;
-  padding: 0.5em;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  margin: 1em;
-  border-radius: 0.4em; }
 
 /* accordion dropdown styling*/
 ul {
@@ -216,7 +195,8 @@ a {
   color: #b63b4d; }
 
 .accordion li.open i.fa-minus:hover {
-  color: #e20a0a; }
+  color: #e20a0a;
+  font-size: 22px; }
 
 .accordion li.open i.fa-plus {
   color: #14690c; }
