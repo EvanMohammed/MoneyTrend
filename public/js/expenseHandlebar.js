@@ -1,6 +1,30 @@
-$(document).on('click touchstart', '.dropdown-toggle', () => {
-  $('.dropdown-menu').toggleClass('dropdown-menu-open');
-});
+const accordionAnimate = () => {
+  const Accordion = function (el, multiple) {
+    this.el = el || {};
+    this.multiple = multiple || false;
+
+    // Variables privadas
+    const links = this.el.find('.link');
+    // Evento
+    links.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+  };
+
+  Accordion.prototype.dropdown = function (e) {
+    const $el = e.data.el;
+    const $this = $(this);
+    const $next = $this.next();
+
+    $next.slideToggle();
+    $this.parent().toggleClass('open');
+
+    if (!e.data.multiple) {
+      $el.find('.submenu').not($next).slideUp().parent()
+        .removeClass('open');
+    }
+  };
+  // eslint-disable-next-line no-unused-vars
+  const accordion = new Accordion($('#accordion'), false);
+};
 
 function createNode(element) {
   return document.createElement(element);
@@ -9,39 +33,24 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
-const expenseSection = document.querySelector('.expenses');
+const expenseSection = document.querySelector('.accordion');
 fetch('/api/expenses').then((response) => response.json()).then((data) => {
   const expenseData = data[0].ExpenseCategories;
-
   expenseData.forEach((category) => {
-    const categorySection = createNode('p');
-    for (let i = 0; i < 4; i += 1) {
-      categorySection.innerHTML = `<p class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${category.categoryName}<span class="caret"></span></button>
-      <div class="input-group plus-minus-input">
-      <div class="input-group-button">
-          <button type="button" class="button hollow circle add" data-id="${category.id}"
-              data-field="quantity">
-              <i class="fa fa-plus" aria-hidden="true"></i>
-          </button>
-      </div>
-      </div>
-        <ul class="dropdown-menu">
-          <li>${category.Expenses[i].expenseName}, $${category.Expenses[i].total}
-          <div class="input-group plus-minus-input">
-          <div class="input-group-button">
-              <button type="button" class="button hollow circle delete" data-id="${category.Expenses[i].id}"
-                  data-field="quantity">
-                  <i class="fa fa-minus" aria-hidden="true"></i>
-              </button>
-          </div>
-          </div>
-          </li>  
-        </ul>
-    </p>`;
-      append(expenseSection, categorySection);
-    }
+    const categorySection = createNode('li');
+    categorySection.innerHTML = `
+    <div class="link">${category.categoryName}<data-id="${category.id} aria-hidden="true"><i class="fa fa-chevron-down"></i></div>
+    <ul class="submenu">  
+    </ul>`;
+    append(expenseSection, categorySection);
+    category.Expenses.forEach((expense) => {
+      const expenseItem = createNode('li');
+      const submenu = document.querySelectorAll('.submenu:last-child')[0];
+      expenseItem.innerHTML = `<a href="#">${expense.expenseName}, $${expense.total}<i class="fa fa-minus" data-id="${expense.id}" aria-hidden="true"></i></a>`;
+      submenu.appendChild(expenseItem);
+    });
   });
+  accordionAnimate();
 }).catch((err) => err);
 
 // posting to API the expenses that the user enters
@@ -49,11 +58,9 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
 document.querySelector('#addCategory').addEventListener('click', (event) => {
   const addedCategory = document.querySelector('#categoryName').value.trim();
   event.preventDefault();
-  console.log('clicked');
   const data = {
     categoryName: addedCategory,
   };
-  console.log(data);
   fetch('/api/expense-categories', {
     method: 'POST',
     credentials: 'same-origin',
@@ -63,5 +70,5 @@ document.querySelector('#addCategory').addEventListener('click', (event) => {
     },
 
     body: JSON.stringify(data),
-  }).then((response) => response.json()).catch((error) => error);
+  }).then(() => window.location.reload()).catch((error) => error);
 });
