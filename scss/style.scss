@@ -1,137 +1,143 @@
 body {
   padding: 20px 80px;
   background: #eee url(../images/double-bubble-outline.png);
-  font-family: 'Cinzel', serif;
-}
+  font-family: 'Cinzel', serif; }
 
 li {
-    padding: 5px;
-    margin: 5px;
-  }
-  
+  padding: 5px;
+  margin: 5px; }
+
 .label {
-    font-weight: bold;
-  }
-  
+  font-weight: bold; }
+
 button {
-    margin-top: 1%;
-    font-weight: 800;
-    display: block;
-    background: #FFF;
-    padding: 2px 10px;
-    color: rgb(40, 54, 24);
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    outline:none;
-    z-index: 1;
-    
-  }
+  margin-top: 1%;
+  font-weight: 800;
+  display: block;
+  background: #FFF;
+  padding: 2px 10px;
+  color: #283618;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+  z-index: 1; }
+
 h1 {
-    text-align: center;
-    margin-top: 1%;
-    font-family: 'Cinzel', serif;
-    font-weight: 800;
-    color: rgb(56, 75, 34);
-    text-decoration: none;
-    font-size: 100px;
-    font-weight: 800;
-    letter-spacing: 0px;
-    line-height: 1;
-    text-shadow: #EDEDED 3px 2px 0;
-    position: relative;
-  }
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-weight: 800;
+  color: #384b22;
+  text-decoration: none;
+  margin: 0.2em;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative; }
 
 h2 {
-    text-align: center;
-    margin-top: 1%;
-    color: rgb(96, 108, 56);
-    text-decoration: none;
-    font-size: 50px;
-    font-weight: 800;
-    letter-spacing: 0px;
-    line-height: 1;
-    text-shadow: #EDEDED 3px 2px 0;
-    position: relative;
-  }
-
+  text-align: center;
+  margin-top: 1%;
+  color: #606c38;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  position: relative; }
 
 h3 {
-    text-align: center;
-    font-size: 2em;
-  }
+  text-align: center;
+  font-size: 2em; }
 
 .sub-header {
-    text-align: center;
-    font-size: large;
-  }
+  text-align: center;
+  font-size: large; 
+  padding-bottom: 2em;
+}
 
 .navbar {
   background-color: #606c38;
   position: absolute;
+  padding: 0.5em;
   top: 0%;
   max-width: 100%;
   left: 0%;
-  right: 0%; 
-}
-
+  right: 0%; }
 
 .navbar-brand {
   color: black;
-  padding-right: 20px;
- }
- 
- .nav-link {
+  padding-right: 20px; }
+
+.nav-link {
   color: whitesmoke;
-  padding-right: 20px;
- }
- 
- .nav-link :disabled {
-   color: whitesmoke;
-   padding-right: 20px;
- }
+  padding-right: 20px; }
+
+.nav-link :disabled {
+  color: whitesmoke;
+  padding-right: 20px; }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
+  grid-auto-rows: minmax(100px, auto); }
 
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
-  border-radius: 2em;
+  border-radius: 2em; 
 }
 
-.two { 
+.two {
   grid-column: 2 / 2;
-  grid-row: 1/2 ;
+  grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
-  border-radius: 2em;
-  border-color: #555555;
-}
+  border-radius: 2em; }
 
-.card {
-  row-gap: 5em;
-  outline-style: double;
-  outline-color: black;
-  background-color: rgb(177, 218, 177)
-}
+.card-footer {
+  position: absolute;
+ }
 
 .three {
   grid-column: 2/2;
-  grid-row: 2/2;
-}
+  grid-row: 2/2; }
 
-#beginnerForm, #income {
+#beginnerForm {
   outline-color: black;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
-  color: #555555;
+  color: #555555; }
+
+#balance {
+  text-align: end;
+  font-size: 30px; }
+
+img {
+  margin-top: 1%;
+  border-image-slice: bevel;
+  border-radius: 30px 0 30px 0;
+  margin-left: 40%; }
+
+/* style the a tags that navigate pages */
+.pageNavigation {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: white;
+  padding: 0.5em;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  margin: 1em;
+  border-radius: 0.4em;
+  position: absolute;
+  right: 0px;
 }
 
 #balance {

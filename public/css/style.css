@@ -26,11 +26,11 @@ button {
 
 h1 {
   text-align: center;
-  margin-top: 1%;
   font-family: 'Cinzel', serif;
   font-weight: 800;
   color: #384b22;
   text-decoration: none;
+  margin: 0.2em;
   font-size: 100px;
   font-weight: 800;
   letter-spacing: 0px;
@@ -56,7 +56,30 @@ h3 {
 
 .sub-header {
   text-align: center;
-  font-size: large; }
+  font-size: large; 
+  padding-bottom: 2em;
+}
+
+.navbar {
+  background-color: #606c38;
+  position: absolute;
+  padding: 0.5em;
+  top: 0%;
+  max-width: 100%;
+  left: 0%;
+  right: 0%; }
+
+.navbar-brand {
+  color: black;
+  padding-right: 20px; }
+
+.nav-link {
+  color: whitesmoke;
+  padding-right: 20px; }
+
+.nav-link :disabled {
+  color: whitesmoke;
+  padding-right: 20px; }
 
 .wrapper {
   display: grid;
@@ -68,50 +91,24 @@ h3 {
   grid-column: 1 / 2;
   grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
-  border-radius: 2em; }
+  border-radius: 2em; 
+}
 
 .two {
   grid-column: 2 / 2;
   grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
-  border-radius: 2em;
-  border-color: #555555; }
+  border-radius: 2em; }
 
-/* .card {
-  row-gap: 5em;
-  outline-style: double;
-  outline-color: black;
-  background-color: #b1dab1; } */
+  .card-footer {
+    position: absolute;
+   }
 
 .three {
   grid-column: 2/2;
   grid-row: 2/2; }
 
-.navbar {
-  background-color: #606c38;
-  position: absolute;
-  top: 0%;
-  max-width: 100%;
-  left: 0%;
-  right: 0%; 
-  }
-
-.navbar-brand {
- color: black;
- padding-right: 20px;
-}
-
-.nav-link {
- color: whitesmoke;
- padding-right: 20px;
-}
-
-.nav-link :disabled {
-  color: whitesmoke;
-  padding-right: 20px;
-}
-
-#beginnerForm, #income {
+#beginnerForm {
   outline-color: black;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
@@ -138,7 +135,10 @@ img {
   font-family: 'Open Sans';
   font-weight: 700;
   margin: 1em;
-  border-radius: 0.4em; }
+  border-radius: 0.4em;
+  position: absolute;
+  right: 0px;
+}
 
 /* accordion dropdown styling*/
 ul {
