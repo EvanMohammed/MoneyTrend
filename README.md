@@ -35,10 +35,6 @@ Additional installations:
 * Google Fonts
 * Animate.css
 
-## Visualization
-
-https://user-images.githubusercontent.com/68203580/92250444-1b112b00-ee91-11ea-9a74-c7caa08c08a6.jpg
-
 ### Executing program
 
 * Sign up and/or log in
@@ -61,6 +57,10 @@ https://user-images.githubusercontent.com/68203580/92250444-1b112b00-ee91-11ea-9
 	* Tap Add Category
 	* The category will be generated to the list box on the expense page, and appear in box two on the home page.
 * Log out via the NavBar option at the top of the page.
+
+## Visualization
+
+![moneyTrendfrontpage](https://user-images.githubusercontent.com/68203580/92251629-b9ea5700-ee92-11ea-9d52-60e0a735cbf3.jpg)
 
 ## Future Development
 
