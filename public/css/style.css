@@ -21,11 +21,11 @@ li {
 
 h1 {
   text-align: center;
-  margin-top: 1%;
   font-family: 'Cinzel', serif;
   font-weight: 800;
   color: #384b22;
   text-decoration: none;
+  margin: 0.2em;
   font-size: 100px;
   font-weight: 800;
   letter-spacing: 0px;
@@ -53,11 +53,14 @@ h3 {
 .sub-header {
   text-align: center;
   font-size: large;
-  padding-bottom: 30px; }
+
+  padding-bottom: 2em; }
+
 
 .navbar {
   background-color: #606c38;
   position: absolute;
+  padding: 0.5em;
   top: 0%;
   max-width: 100%;
   left: 0%;
@@ -83,6 +86,7 @@ h3 {
 
 .one {
   grid-column: 1 / 2;
+
   grid-row: 1/2;
   padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
@@ -90,6 +94,7 @@ h3 {
 
 .two {
   grid-column: 2 / 2;
+
   grid-row: 1/2;
   padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
@@ -99,7 +104,15 @@ h3 {
   grid-column: 2/2;
   grid-row: 2/2; }
 
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
+  border-radius: 2em; }
+
+#beginnerForm {
+  outline-color: black;
+
+
 #beginnerForm, #income {
+
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
@@ -115,6 +128,16 @@ img {
   border-radius: 30px 0 30px 0;
   margin-left: 40%; }
 
+
+#balance {
+  text-align: end;
+  font-size: 30px; }
+
+img {
+  margin-top: 1%;
+  border-image-slice: bevel;
+  border-radius: 30px 0 30px 0;
+  margin-left: 40%; }
 #categoryInput {
   text-align: center;
   margin-top: 8em; }
@@ -125,6 +148,7 @@ img {
 #categoryName {
   padding: 1em;
   margin: 0.5em; }
+
 
 /* accordion dropdown styling*/
 ul {
@@ -191,7 +215,8 @@ ul {
   color: #b63b4d; }
 
 .accordion li.open i.fa-minus:hover {
-  color: #e20a0a; }
+  color: #e20a0a;
+  font-size: 22px; }
 
 .accordion li.open i.fa-plus {
   color: #14690c; }
