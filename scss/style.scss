@@ -17,27 +17,13 @@ li {
   border-radius: 0.3em;
   box-shadow: antiquewhite;
   border: none;
+  outline: none;
 }
 
 .label {
   font-weight: bold;
 }
   
-// button {
-//     margin-top: 1%;
-//     font-weight: 800;
-//     display: block;
-//     background: #FFF;
-//     padding: 2px 10px;
-//     color: rgb(40, 54, 24);
-//     font-size: 25px;
-//     text-align: center;
-//     text-decoration: none;
-//     position: relative;
-//     outline:none;
-//     z-index: 1;
-    
-//   }
 h1 {
     text-align: center;
     margin-top: 1%;
@@ -112,38 +98,26 @@ h3 {
 
 .one {
   grid-column: 1 / 2;
-
   grid-row: 1/2;
   padding: 2em;
-
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
 }
 
 .two {
   grid-column: 2 / 2;
-
   grid-row: 1/2 ;
   padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
-  // border-color: #555555;
-
 }
-
-// .card {
-//   row-gap: 5em;
-//   outline-style: double;
-//   outline-color: black;
-//   background-color: rgb(177, 218, 177)
-// }
 
 .three {
   grid-column: 2/2;
   grid-row: 2/2;
 }
 
-#beginnerForm, #income {
+#beginnerForm {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
@@ -177,19 +151,6 @@ img {
   margin: 0.5em;
 }
 
-//  .pageNavigation {
-//   color: black;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   background: white;
-//   padding: 0.5em;
-//   font-family: 'Open Sans';
-//   font-weight: 700;
-//   margin: 1em;
-//   border-radius: 0.4em;
-//  }
-
-/* accordion dropdown styling*/
 ul {
   list-style-type: none;
 }
@@ -211,9 +172,8 @@ ul {
   text-align: center;
 }
 
-// a {
-//   color: #FFF;
-//   text-decoration: none; }
+a {
+  text-decoration: none; }
 
 .accordion {
   width: 100%;
@@ -248,7 +208,6 @@ ul {
   top: 16px;
   left: 12px;
   font-size: 18px;
-  color: #FFF;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -258,14 +217,15 @@ ul {
   text-decoration: none;
   right: 12px;
   left: auto;
+  color: #FFF;
   font-size: 16px;
 }
 
-.accordion li.open i.fa-minus {
+.accordion i.fa-minus {
   color: #b63b4d;
 }
 
-.accordion li.open i.fa-minus:hover {
+.accordion i.fa-minus:hover {
   color: #e20a0a;
   font-size: 22px;
 }
@@ -297,11 +257,11 @@ ul {
 /**
  * Submenu
  -----------------------------*/
-.submenu {
+ .submenu {
   display: none;
-  background: #FFF;
-  font-size: 1.2em;
-}
+  color: black;
+ }
+
 
 .submenu a {
   display: block;

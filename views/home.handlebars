@@ -7,6 +7,13 @@
   <title>MoneyTrend</title>
   <script src="https://code.jquery.com/jquery.js"></script>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MoneyTrend</a>
+    <a class="nav-link" href="/home">Home</a>
+    <a class="nav-link" href="/income">Income</a>
+    <a class="nav-link" href="/expenses">Expenses</a>
+    <a class="nav-link disabled" href="/login" tabindex="-1" aria-disabled="true">Log out</a>
+  </nav>
     <div class="wrapper">
       <div class="one grid-container" id="income">
         <h3>Income</h3>
@@ -24,11 +31,10 @@
         <div class="card-footer">
           <a class="pageNavigation" href="/expenses"><button class="btn btn-default">My Expenses</button></a>
         </div>
+  </div>
 
   <div class="three" id="balance">
     <p id="totalBalance"></p>
-    {{!-- <h3>Current Balance:</h3> --}}
-  </div>
   </div>
    <footer class="footer">
             <div class="container">

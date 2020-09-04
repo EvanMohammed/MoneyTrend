@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 // controls dropdown menu behavior
 const accordionAnimate = () => {
   const Accordion = function (el, multiple) {
@@ -42,6 +43,9 @@ const initAddExpenseBtn = () => {
       const categoryId = e.target.getAttribute('data-id');
       const newExpenseName = document.getElementById(`expenseName${categoryId}`).value.trim();
       const expenseTotal = document.getElementById(`expenseTotal${categoryId}`).value.trim();
+      if (newExpenseName === '' || expenseTotal === '') {
+        return false;
+      }
       const newItem = {
         expenseName: newExpenseName,
         total: parseInt(expenseTotal, 10),
@@ -68,20 +72,21 @@ const getExpenseData = () => {
     expenseData.forEach((category) => {
       const categorySection = createNode('li');
       categorySection.innerHTML = `
-      <div class="link">${category.categoryName}<i class="fa fa-chevron-down"></i></div>
+      <div class="link"><i id="deleteCategory" data-id="${category.id}" class="fa fa-minus" aria-hidden="true"></i>${category.categoryName}<i class="fa fa-chevron-down"></i></div>
       <ul class="submenu">  
       <li><a> Add Item <i id="addItem" data-id="${category.id}" class="fa fa-plus" aria-hidden="true"></i></a></li>
       <li id="textarea${category.id}" style="display:none">
       <label for="expenseName">Expense Name:</label>
       <br>
-      <input class="form-control" id="expenseName${category.id}"/>
+      <input class="form-control" id="expenseName${category.id}" required/>
       <br>
       <label for="expenseTotal">Cost:</label>
       <br>
-      <input class="form-control" id="expenseTotal${category.id}"/>
+      <input class="form-control" id="expenseTotal${category.id}" required/>
       <br>
-      <button data-id="${category.id}" class="addExpense">Submit</button>
+      <button class="addExpense btn-default" data-id="${category.id}" >Submit</button>
       </li>
+      <hr>
       </ul>`;
       append(expenseSection, categorySection);
       category.Expenses.forEach((expense) => {
@@ -99,8 +104,11 @@ const getExpenseData = () => {
 // posting to API the expenses that the user enters
 
 document.querySelector('#addCategory').addEventListener('click', (event) => {
-  const addedCategory = document.querySelector('#categoryName').value.trim();
   event.preventDefault();
+  const addedCategory = document.querySelector('#categoryName').value.trim();
+  if (addedCategory === '') {
+    return false;
+  }
   const data = {
     categoryName: addedCategory,
   };
@@ -118,6 +126,18 @@ document.addEventListener('click', (e) => {
   if (e.target && e.target.id === 'deleteItem') {
     const id = e.target.getAttribute('data-id');
     fetch(`/api/expense-items/${id}`, {
+      method: 'DELETE',
+      credentials: 'same-origin',
+    }).then(() => {
+      window.location.reload();
+    });
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'deleteCategory') {
+    const id = e.target.getAttribute('data-id');
+    fetch(`/api/expense-categories/${id}`, {
       method: 'DELETE',
       credentials: 'same-origin',
     }).then(() => {
