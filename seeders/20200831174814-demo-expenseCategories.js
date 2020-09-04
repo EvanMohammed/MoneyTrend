@@ -9,37 +9,37 @@ module.exports = {
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Transportation',
-      userId: 2,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Consumables',
-      userId: 2,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Utilities',
-      userId: 2,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Savings',
-      userId: 2,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Medical',
-      userId: 2,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Recreation',
-      userId: 2,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
       categoryName: 'Miscellaneous',
-      userId: 3,
+      userId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }], {});
