@@ -5,43 +5,54 @@ body {
 }
 
 li {
-  padding: 5px;
-  margin: 5px;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+.btn-default { 
+  box-shadow: 2px 2px 2px whitesmoke;
+  font-family: 'Cinzel', serif;
+  background: whitesmoke;
+  padding: 0.6em;
+  border-radius: 0.3em;
+  box-shadow: antiquewhite;
+  border: none;
 }
 
 .label {
   font-weight: bold;
 }
-
-button {
-  margin-top: 1%;
-  font-weight: 800;
-  display: block;
-  background: #FFF;
-  padding: 2px 10px;
-  color: #283618;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  outline: none;
-  z-index: 1;
-}
-
+  
+// button {
+//     margin-top: 1%;
+//     font-weight: 800;
+//     display: block;
+//     background: #FFF;
+//     padding: 2px 10px;
+//     color: rgb(40, 54, 24);
+//     font-size: 25px;
+//     text-align: center;
+//     text-decoration: none;
+//     position: relative;
+//     outline:none;
+//     z-index: 1;
+    
+//   }
 h1 {
-  text-align: center;
-  font-family: 'Cinzel', serif;
-  font-weight: 800;
-  color: #384b22;
-  text-decoration: none;
-  margin: 0.2em;
-  font-size: 100px;
-  font-weight: 800;
-  letter-spacing: 0px;
-  line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
-  position: relative;
-}
+    text-align: center;
+    margin-top: 1%;
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    color: rgb(56, 75, 34);
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 1;
+    text-shadow: #EDEDED 3px 2px 0;
+    padding-top: 40px;
+    position: relative;
+  }
 
 h2 {
   text-align: center;
@@ -111,12 +122,24 @@ h3 {
   border-radius: 2em;
 }
 
-#beginnerForm {
+.card {
+  row-gap: 5em;
+  outline-style: double;
   outline-color: black;
+  background-color: rgb(177, 218, 177)
+}
+
+.three {
+  grid-column: 2/2;
+  grid-row: 2/2;
+}
+
+#beginnerForm, #income {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
   color: #555555;
+  
 }
 
 #balance {
@@ -131,32 +154,31 @@ img {
   margin-left: 40%;
 }
 
-/* style the a tags that navigate pages */
-.pageNavigation {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: white;
-  padding: 0.5em;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  margin: 1em;
-  border-radius: 0.4em;
-  position: absolute;
-  right: 0px;
+#categoryInput {
+  text-align: center;
+  margin-top: 8em;
 }
 
-#balance {
-  text-align: end;
-  font-size: 30px;
+#incomeInput {
+  text-align: center;
 }
 
-img {
-  margin-top: 1%;
-  border-image-slice: bevel;
-  border-radius: 30px 0 30px 0;
-  margin-left: 40%;
+#categoryName {
+  padding: 1em;
+  margin: 0.5em;
 }
+
+//  .pageNavigation {
+//   color: black;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   background: white;
+//   padding: 0.5em;
+//   font-family: 'Open Sans';
+//   font-weight: 700;
+//   margin: 1em;
+//   border-radius: 0.4em;
+//  }
 
 /* accordion dropdown styling*/
 ul {
@@ -180,12 +202,20 @@ ul {
   text-align: center;
 }
 
-a {
-  color: #FFF;
-  text-decoration: none;
-}
+// a {
+//   color: #FFF;
+//   text-decoration: none; }
 
-.accordion .link {
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #dda15e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+.accordion, .link {
   cursor: pointer;
   display: block;
   padding: 15px 15px 15px 42px;
@@ -205,6 +235,7 @@ a {
 
 .accordion li i {
   position: absolute;
+  text-decoration: none;
   top: 16px;
   left: 12px;
   font-size: 18px;
@@ -215,6 +246,7 @@ a {
 }
 
 .accordion li i.fa-chevron-down {
+  text-decoration: none;
   right: 12px;
   left: auto;
   font-size: 16px;

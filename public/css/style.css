@@ -7,22 +7,17 @@ li {
   padding: 5px;
   margin: 5px; }
 
+.btn-default {
+  box-shadow: 2px 2px 2px whitesmoke;
+  font-family: 'Cinzel', serif;
+  background: whitesmoke;
+  padding: 0.6em;
+  border-radius: 0.3em;
+  box-shadow: antiquewhite;
+  border: none; }
+
 .label {
   font-weight: bold; }
-
-button {
-  margin-top: 1%;
-  font-weight: 800;
-  display: block;
-  background: #FFF;
-  padding: 2px 10px;
-  color: #283618;
-  font-size: 25px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-  outline: none;
-  z-index: 1; }
 
 h1 {
   text-align: center;
@@ -36,6 +31,7 @@ h1 {
   letter-spacing: 0px;
   line-height: 1;
   text-shadow: #EDEDED 3px 2px 0;
+  padding-top: 40px;
   position: relative; }
 
 h2 {
@@ -57,7 +53,11 @@ h3 {
 .sub-header {
   text-align: center;
   font-size: large;
+<<<<<<< HEAD
   padding-bottom: 2em; }
+=======
+  padding-bottom: 30px; }
+>>>>>>> master
 
 .navbar {
   background-color: #606c38;
@@ -96,8 +96,12 @@ h3 {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
+<<<<<<< HEAD
 #beginnerForm {
   outline-color: black;
+=======
+#beginnerForm, #income {
+>>>>>>> master
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
@@ -113,6 +117,7 @@ img {
   border-radius: 30px 0 30px 0;
   margin-left: 40%; }
 
+<<<<<<< HEAD
 /* style the a tags that navigate pages */
 .pageNavigation {
   color: black;
@@ -136,6 +141,18 @@ img {
   border-image-slice: bevel;
   border-radius: 30px 0 30px 0;
   margin-left: 40%; }
+=======
+#categoryInput {
+  text-align: center;
+  margin-top: 8em; }
+
+#incomeInput {
+  text-align: center; }
+
+#categoryName {
+  padding: 1em;
+  margin: 0.5em; }
+>>>>>>> master
 
 /* accordion dropdown styling*/
 ul {
@@ -150,17 +167,23 @@ ul {
   margin: 0 auto;
   text-align: center;
   left: 0%;
-  right: 0%; }
+  right: 0%; 
+}
 
 #footerText {
   color: black !important;
   text-align: center; }
 
-a {
-  color: #FFF;
-  text-decoration: none; }
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #dda15e;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
 
-.accordion .link {
+.accordion, .link {
   cursor: pointer;
   display: block;
   padding: 15px 15px 15px 42px;
@@ -178,6 +201,7 @@ a {
 
 .accordion li i {
   position: absolute;
+  text-decoration: none;
   top: 16px;
   left: 12px;
   font-size: 18px;
@@ -187,6 +211,7 @@ a {
   transition: all 0.4s ease; }
 
 .accordion li i.fa-chevron-down {
+  text-decoration: none;
   right: 12px;
   left: auto;
   font-size: 16px; }
@@ -237,4 +262,5 @@ a {
   position: relative; }
 
 .accordion li.open i.fa-chevron-down {
-  color: #b63b4d; }
+  color: #b63b4d; 
+}

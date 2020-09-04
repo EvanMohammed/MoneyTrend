@@ -4,11 +4,13 @@
         <div class="incomes"></div>
 
             <div class="input-group">
-                <input type="text" class="form-control" id="incomeForm" placeholder="Name of your income"
+                <input type="text" class="form-control" id="incomeName" placeholder="Name of your income"
+                    aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                <input type="number" step="0.01" class="form-control" id="incomeAmount" placeholder="Income Amount"
                     aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
                 <div class="input-group-append" id="button-addon4">
-                    <button class="btn btn-outline-secondary" type="button">Add Income</button>
-                    <button class="btn btn-outline-secondary" type="button">Subtract Income</button>
+                    <p id="incomeSum"></p>
+                    <button class="btn btn-outline-secondary" id="addIncome" type="button">Add Income</button>
                 </div>
             </div>
     </div>

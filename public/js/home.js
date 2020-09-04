@@ -34,8 +34,10 @@ fetch('/api/expenses').then((response) => response.json()).then((data) => {
   const expenseData = data[0].ExpenseCategories;
   expenseData.forEach((category) => {
     const categorySection = createNode('ul');
-    categorySection.innerHTML = `${category.categoryName}`;
-    append(expenseSection, categorySection);
+    for (let i = 0; i < 4; i += 1) {
+      categorySection.innerHTML = `${category.categoryName}`;
+      append(expenseSection, categorySection);
+    }
   });
 }).catch((err) => err);
 
@@ -48,3 +50,16 @@ fetch('/api/expenses/total').then((response) => response.json()).then((data) => 
 }).catch((err) => {
   throw err;
 });
+
+const totalBalance = document.querySelector('#balance');
+Promise.all([
+  fetch('/api/expenses/total'),
+  fetch('/api/income/total'),
+]).then((responses) => Promise.all(responses.map((response) => response.json()))).then((data) => {
+  const totalExp = data[0][0].total;
+  const totalInc = data[1][0].total;
+  const currentBalance = totalInc - totalExp;
+  const displayBalance = createNode('p');
+  displayBalance.innerHTML = `Current Balance : ${currentBalance}`;
+  totalBalance.appendChild(displayBalance);
+}).catch((error) => error);
