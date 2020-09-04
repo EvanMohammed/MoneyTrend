@@ -11,7 +11,11 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
   incomes.forEach((income) => {
     const p = createNode('p');
     for (let i = 0; i < incomes.length; i += 1) {
-      p.innerHTML = `<p><a href="#"> <div class="dropdown">
+      p.innerHTML = `<p><a href="#" 
+      style="text-decoration: none; 
+      color: black">
+      
+      <div class="dropdown">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">${income.incomeSource}
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
