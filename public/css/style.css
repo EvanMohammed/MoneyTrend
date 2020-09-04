@@ -21,11 +21,11 @@ li {
 
 h1 {
   text-align: center;
+  margin-top: 1%;
   font-family: 'Cinzel', serif;
   font-weight: 800;
   color: #384b22;
   text-decoration: none;
-  margin: 0.2em;
   font-size: 100px;
   font-weight: 800;
   letter-spacing: 0px;
@@ -53,11 +53,7 @@ h3 {
 .sub-header {
   text-align: center;
   font-size: large;
-<<<<<<< HEAD
   padding-bottom: 2em; }
-=======
-  padding-bottom: 30px; }
->>>>>>> master
 
 .navbar {
   background-color: #606c38;
@@ -96,12 +92,17 @@ h3 {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
-<<<<<<< HEAD
-#beginnerForm {
+.card {
+  row-gap: 5em;
+  outline-style: double;
   outline-color: black;
-=======
+  background-color: #b1dab1; }
+
+.three {
+  grid-column: 2/2;
+  grid-row: 2/2; }
+
 #beginnerForm, #income {
->>>>>>> master
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
@@ -117,31 +118,6 @@ img {
   border-radius: 30px 0 30px 0;
   margin-left: 40%; }
 
-<<<<<<< HEAD
-/* style the a tags that navigate pages */
-.pageNavigation {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  background: white;
-  padding: 0.5em;
-  font-family: 'Open Sans';
-  font-weight: 700;
-  margin: 1em;
-  border-radius: 0.4em;
-  position: absolute;
-  right: 0px; }
-
-#balance {
-  text-align: end;
-  font-size: 30px; }
-
-img {
-  margin-top: 1%;
-  border-image-slice: bevel;
-  border-radius: 30px 0 30px 0;
-  margin-left: 40%; }
-=======
 #categoryInput {
   text-align: center;
   margin-top: 8em; }
@@ -152,7 +128,6 @@ img {
 #categoryName {
   padding: 1em;
   margin: 0.5em; }
->>>>>>> master
 
 /* accordion dropdown styling*/
 ul {
@@ -167,8 +142,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   left: 0%;
-  right: 0%; 
-}
+  right: 0%; }
 
 #footerText {
   color: black !important;
@@ -262,5 +236,4 @@ ul {
   position: relative; }
 
 .accordion li.open i.fa-chevron-down {
-  color: #b63b4d; 
-}
+  color: #b63b4d; }
