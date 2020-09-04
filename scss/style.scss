@@ -113,35 +113,30 @@ h3 {
 
 .one {
   grid-column: 1 / 2;
-
   grid-row: 1/2;
   padding: 2em;
-
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
 }
 
 .two {
   grid-column: 2 / 2;
-
   grid-row: 1/2 ;
   padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
-  // border-color: #555555;
 
 }
-
-// .card {
-//   row-gap: 5em;
-//   outline-style: double;
-//   outline-color: black;
-//   background-color: rgb(177, 218, 177)
-// }
 
 .three {
   grid-column: 2/2;
   grid-row: 2/2;
+}
+
+#expenseCard {
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
+  display: grid;
+  border-radius: 2em;
 }
 
 #beginnerForm {
@@ -173,22 +168,10 @@ img {
   text-align: center;
 }
 
-#categoryName {
+.form-control {
   padding: 1em;
   margin: 0.5em;
 }
-
-//  .pageNavigation {
-//   color: black;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   background: white;
-//   padding: 0.5em;
-//   font-family: 'Open Sans';
-//   font-weight: 700;
-//   margin: 1em;
-//   border-radius: 0.4em;
-//  }
 
 /* accordion dropdown styling*/
 ul {
@@ -227,7 +210,7 @@ a {
 .accordion, .link {
   cursor: pointer;
   display: block;
-  padding: 15px 15px 15px 42px;
+  padding: 0.5em 0.5em 0.5em 42px;
   color: #FFF;
   font-size: 1.5em;
   font-weight: 700;
