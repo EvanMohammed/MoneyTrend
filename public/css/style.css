@@ -84,21 +84,22 @@ h3 {
 .one {
   grid-column: 1 / 2;
   grid-row: 1/2;
+  padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
 .two {
   grid-column: 2 / 2;
   grid-row: 1/2;
+  padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
-  border-radius: 2em;
-  border-color: #555555; }
+  border-radius: 2em; }
 
-.card {
+/* .card {
   row-gap: 5em;
   outline-style: double;
   outline-color: black;
-  background-color: #b1dab1; }
+  background-color: #b1dab1; } */
 
 .three {
   grid-column: 2/2;
@@ -144,8 +145,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   left: 0%;
-  right: 0%; 
-}
+  right: 0%; }
 
 #footerText {
   color: black !important;
@@ -238,5 +238,4 @@ ul {
   position: relative; }
 
 .accordion li.open i.fa-chevron-down {
-  color: #b63b4d; 
-}
+  color: #b63b4d; }
