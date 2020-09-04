@@ -12,7 +12,17 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
   incomes.forEach((income) => {
     const p = createNode('ul');
     for (let i = 0; i < incomes.length; i += 1) {
-      p.innerHTML = `${income.incomeSource} : $ ${income.total} `;
+      p.innerHTML = `<p><a href="#" 
+      style="text-decoration: none; 
+      color: black">
+      
+      <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">${income.incomeSource}
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+            <li> Cost :  ${income.total} </li>
+      </ul>
+      </div></a></p>`;
       append(incomeHandlebarUl, p);
     }
   });
