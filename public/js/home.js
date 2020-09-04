@@ -5,7 +5,6 @@ function createNode(element) {
 function append(parent, el) {
   return parent.appendChild(el);
 }
-
 const incomeUl = document.querySelector('#incomes');
 
 fetch('/api/income').then((response) => response.json()).then((data) => {
@@ -63,7 +62,4 @@ Promise.all([
   const displayBalance = createNode('p');
   displayBalance.innerHTML = `Current Balance : ${currentBalance}`;
   totalBalance.appendChild(displayBalance);
-  console.log(currentBalance);
-}).catch((error) => {
-  console.log(error);
-});
+}).catch((error) => error);

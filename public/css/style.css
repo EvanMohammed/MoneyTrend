@@ -105,7 +105,6 @@ h3 {
   grid-row: 2/2; }
 
 #beginnerForm, #income {
-  outline-color: black;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
@@ -121,7 +120,17 @@ img {
   border-radius: 30px 0 30px 0;
   margin-left: 40%; }
 
-/* style the a tags that navigate pages */
+#categoryInput {
+  text-align: center;
+  margin-top: 8em; }
+
+#incomeInput {
+  text-align: center; }
+
+#categoryName {
+  padding: 1em;
+  margin: 0.5em; }
+
 /* accordion dropdown styling*/
 ul {
   list-style-type: none; }
@@ -135,7 +144,8 @@ ul {
   margin: 0 auto;
   text-align: center;
   left: 0%;
-  right: 0%; }
+  right: 0%; 
+}
 
 #footerText {
   color: black !important;
@@ -150,7 +160,7 @@ ul {
   -moz-border-radius: 4px;
   border-radius: 4px; }
 
-.accordion .link {
+.accordion, .link {
   cursor: pointer;
   display: block;
   padding: 15px 15px 15px 42px;
@@ -168,6 +178,7 @@ ul {
 
 .accordion li i {
   position: absolute;
+  text-decoration: none;
   top: 16px;
   left: 12px;
   font-size: 18px;
@@ -177,12 +188,23 @@ ul {
   transition: all 0.4s ease; }
 
 .accordion li i.fa-chevron-down {
+  text-decoration: none;
   right: 12px;
   left: auto;
   font-size: 16px; }
 
 .accordion li.open i.fa-minus {
   color: #b63b4d; }
+
+.accordion li.open i.fa-minus:hover {
+  color: #e20a0a; }
+
+.accordion li.open i.fa-plus {
+  color: #14690c; }
+
+.accordion li.open i.fa-plus:hover {
+  color: #1f9e13;
+  font-size: 22px; }
 
 .accordion li.open .link {
   color: black; }
@@ -216,4 +238,5 @@ ul {
   position: relative; }
 
 .accordion li.open i.fa-chevron-down {
-  color: #b63b4d; }
+  color: #b63b4d; 
+}
