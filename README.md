@@ -3,6 +3,7 @@
 MoneyTrend allows a user to create an account as a unique user. They can then add in their incomes, with dollar amounts and details. The expenses page allows the user to create a table of their budget, categorized for their convenience.  
 
 ## User story 
+
 	As a household budget planner,
 	I want to be able to keep track of all of my income and expenses
 	so that I can accurately track my finainces.
@@ -11,6 +12,7 @@ MoneyTrend allows a user to create an account as a unique user. They can then ad
 	then I will have a customized roadmap for meeting my financial goals!
 
 ## Elevator Pitch 
+
 How do you manage your household finances? Do you ever have  ahard time remembering when your HOA fees are due or how much you should budget for your utilities each month? Not to worrry, there's now a one-stop-shop for all your budgeting goals! MoneyTrend is the new,fully-customizable, budget app to meet all your needs. Do you have a variable monthly income? No problem! Do you pay your car insurance bi-yearly instead of monthly? No problem! Give MoneyTrend a try to see how you can make your money work for you.
 
 ## Description
@@ -32,6 +34,10 @@ Developers will need to enable:
 Additional installations:
 * Google Fonts
 * Animate.css
+
+## Visualization
+
+https://user-images.githubusercontent.com/68203580/92250444-1b112b00-ee91-11ea-9a74-c7caa08c08a6.jpg
 
 ### Executing program
 
@@ -55,6 +61,20 @@ Additional installations:
 	* Tap Add Category
 	* The category will be generated to the list box on the expense page, and appear in box two on the home page.
 * Log out via the NavBar option at the top of the page.
+
+## Future Development
+
+* Alter the expense categories to display as a card carousel
+* Add charts and graphs for budget visualizations
+* Create a custom logo
+* Write a family account feature that allows users to share data
+* Add automated options for recurring expenses or incomes 
+* Create ranges of acceptability in dollar amounts or dates, flagging the user when a budget item falls outside of their custom ranges
+
+## Links
+
+Deployed: https://EvanMohammed.github.io/MoneyTrend/
+Repo: https://moneytrend.herokuapp.com/
 
 ## Feedback?
 
