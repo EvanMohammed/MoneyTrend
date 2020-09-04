@@ -101,6 +101,11 @@ h3 {
   grid-column: 2/2;
   grid-row: 2/2; }
 
+#expenseCard {
+  background: -webkit-radial-gradient(#bc6c25, #dda15e);
+  display: grid;
+  border-radius: 2em; }
+
 #beginnerForm {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
@@ -125,7 +130,7 @@ img {
 #incomeInput {
   text-align: center; }
 
-#categoryName {
+.form-control {
   padding: 1em;
   margin: 0.5em; }
 
@@ -163,7 +168,7 @@ a {
 .accordion, .link {
   cursor: pointer;
   display: block;
-  padding: 15px 15px 15px 42px;
+  padding: 0.5em 0.5em 0.5em 42px;
   color: #FFF;
   font-size: 1.5em;
   font-weight: 700;

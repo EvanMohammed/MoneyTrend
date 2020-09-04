@@ -13,7 +13,7 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
   incomes.forEach((income) => {
     const p = createNode('p');
     for (let i = 0; i < incomes.length; i += 1) {
-      p.innerHTML = `${income.incomeSource}:  ${income.total}  `;
+      p.innerHTML = `${income.incomeSource}:  $${income.total}  `;
       append(incomeHandlebarUl, p);
     }
   });
