@@ -25,11 +25,11 @@ li {
 
 h1 {
   text-align: center;
+  margin-top: 1%;
   font-family: 'Cinzel', serif;
   font-weight: 800;
   color: #384b22;
   text-decoration: none;
-  margin: 0.2em;
   font-size: 100px;
   font-weight: 800;
   letter-spacing: 0px;
@@ -57,7 +57,7 @@ h3 {
 .sub-header {
   text-align: center;
   font-size: large;
-  padding-bottom: 30px; }
+  padding-bottom: 2em; }
 
 .navbar {
   background-color: #606c38;
@@ -89,11 +89,15 @@ h3 {
 
 .one {
   grid-column: 1 / 2;
+  grid-row: 1/2;
+  padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
 .two {
   grid-column: 2 / 2;
+  grid-row: 1/2;
+  padding: 2em;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em; }
 
@@ -121,8 +125,7 @@ img {
   margin-top: 1%;
   border-image-slice: bevel;
   border-radius: 30px 0 30px 0;
-  margin-left: 40%; 
-}
+  margin-left: 40%; }
 
 #categoryInput {
   text-align: center;
@@ -150,8 +153,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   left: 0%;
-  right: 0%; 
-}
+  right: 0%; }
 
 #footerText {
   color: black !important;
@@ -247,5 +249,4 @@ i.fa-minus:hover {
   position: relative; }
 
 .accordion li.open i.fa-chevron-down {
-  color: #b63b4d; 
-}
+  color: #b63b4d; }
