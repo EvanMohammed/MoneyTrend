@@ -57,7 +57,7 @@ h1 {
 h2 {
   text-align: center;
   margin-top: 1%;
-  color: rgb(96, 108, 56);
+  color: #606c38;
   text-decoration: none;
   font-size: 50px;
   font-weight: 800;
@@ -67,42 +67,41 @@ h2 {
   position: relative;
 }
 
-
 h3 {
   text-align: center;
   font-size: 2em;
 }
 
 .sub-header {
-    text-align: center;
-    font-size: large;
-    padding-bottom: 30px;
-  }
+  text-align: center;
+  font-size: large;
+  padding-bottom: 2em;
+}
 
 .navbar {
   background-color: #606c38;
   position: absolute;
+  padding: 0.5em;
   top: 0%;
   max-width: 100%;
   left: 0%;
-  right: 0%; 
+  right: 0%;
 }
-
 
 .navbar-brand {
   color: black;
   padding-right: 20px;
- }
- 
- .nav-link {
+}
+
+.nav-link {
   color: whitesmoke;
   padding-right: 20px;
- }
- 
- .nav-link :disabled {
-   color: whitesmoke;
-   padding-right: 20px;
- }
+}
+
+.nav-link :disabled {
+  color: whitesmoke;
+  padding-right: 20px;
+}
 
 .wrapper {
   display: grid;
@@ -113,17 +112,14 @@ h3 {
 
 .one {
   grid-column: 1 / 2;
-  grid-row: 1/2;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
 }
 
 .two {
   grid-column: 2 / 2;
-  grid-row: 1/2 ;
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
-  border-color: #555555;
 }
 
 .card {
@@ -190,21 +186,21 @@ ul {
 }
 
 .footer {
-    background-color: #606c38;
-    position: fixed;
-    bottom: 0;
-    height: 30px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    left:0%;
-    right: 0%;
-  }
-  
+  background-color: #606c38;
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  left: 0%;
+  right: 0%;
+}
+
 #footerText {
-    color: black !important;
-    text-align: center;
-  }
+  color: black !important;
+  text-align: center;
+}
 
 // a {
 //   color: #FFF;
@@ -262,6 +258,7 @@ ul {
 
 .accordion li.open i.fa-minus:hover {
   color: #e20a0a;
+  font-size: 22px;
 }
 
 .accordion li.open i.fa-plus {

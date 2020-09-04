@@ -35,8 +35,32 @@ function append(parent, el) {
   return parent.appendChild(el);
 }
 
-// builds drop down menu with categories and expenses
+const initAddExpenseBtn = () => {
+  document.querySelectorAll('.addExpense').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const categoryId = e.target.getAttribute('data-id');
+      const newExpenseName = document.getElementById(`expenseName${categoryId}`).value.trim();
+      const expenseTotal = document.getElementById(`expenseTotal${categoryId}`).value.trim();
+      const newItem = {
+        expenseName: newExpenseName,
+        total: parseInt(expenseTotal, 10),
+        ExpenseCategoryId: parseInt(categoryId, 10),
+      };
+      fetch('/api/expense-items/', {
+        method: 'post',
+        body: JSON.stringify(newItem),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then(() => {
+        window.location.reload();
+      });
+    });
+  });
+};
 
+// builds drop down menu with categories and expenses
 const getExpenseData = () => {
   const expenseSection = document.querySelector('.accordion');
   fetch('/api/expenses').then((response) => response.json()).then((data) => {
@@ -44,9 +68,20 @@ const getExpenseData = () => {
     expenseData.forEach((category) => {
       const categorySection = createNode('li');
       categorySection.innerHTML = `
-      <div class="link">${category.categoryName}<data-id="${category.id} aria-hidden="true"><i class="fa fa-chevron-down"></i></div>
+      <div class="link">${category.categoryName}<i class="fa fa-chevron-down"></i></div>
       <ul class="submenu">  
-      <li><a> Add Item <i id="addItem" class="fa fa-plus" aria-hidden="true"></i></a></li>
+      <li><a> Add Item <i id="addItem" data-id="${category.id}" class="fa fa-plus" aria-hidden="true"></i></a></li>
+      <li id="textarea${category.id}" style="display:none">
+      <label for="expenseName">Expense Name:</label>
+      <br>
+      <input class="form-control" id="expenseName${category.id}"/>
+      <br>
+      <label for="expenseTotal">Cost:</label>
+      <br>
+      <input class="form-control" id="expenseTotal${category.id}"/>
+      <br>
+      <button data-id="${category.id}" class="addExpense">Submit</button>
+      </li>
       </ul>`;
       append(expenseSection, categorySection);
       category.Expenses.forEach((expense) => {
@@ -56,6 +91,7 @@ const getExpenseData = () => {
         submenu.appendChild(expenseItem);
       });
     });
+    initAddExpenseBtn();
     accordionAnimate();
   }).catch((err) => err);
 };
@@ -73,14 +109,10 @@ document.querySelector('#addCategory').addEventListener('click', (event) => {
     credentials: 'same-origin',
     headers: {
       'Content-Type': 'application/json',
-
     },
-
     body: JSON.stringify(data),
   }).then(() => window.location.reload()).catch((error) => error);
 });
-
-getExpenseData();
 
 document.addEventListener('click', (e) => {
   if (e.target && e.target.id === 'deleteItem') {
@@ -95,8 +127,11 @@ document.addEventListener('click', (e) => {
 });
 
 document.addEventListener('click', (e) => {
-  const submenu = document.querySelectorAll('.submenu:first-child')[0];
   if (e.target && e.target.id === 'addItem') {
-    submenu.innerHTML = '<input></input>';
+    const id = e.target.getAttribute('data-id');
+    const textInput = document.getElementById(`textarea${id}`);
+    textInput.style.display = 'block';
   }
 });
+
+getExpenseData();
