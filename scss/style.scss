@@ -17,6 +17,7 @@ li {
   border-radius: 0.3em;
   box-shadow: antiquewhite;
   border: none;
+  outline: none;
 }
 
 .label {
@@ -143,7 +144,7 @@ h3 {
   grid-row: 2/2;
 }
 
-#beginnerForm, #income {
+#beginnerForm {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
   padding: 2em;
@@ -211,9 +212,8 @@ ul {
   text-align: center;
 }
 
-// a {
-//   color: #FFF;
-//   text-decoration: none; }
+a {
+  text-decoration: none; }
 
 .accordion {
   width: 100%;
@@ -248,7 +248,6 @@ ul {
   top: 16px;
   left: 12px;
   font-size: 18px;
-  color: #FFF;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -258,14 +257,15 @@ ul {
   text-decoration: none;
   right: 12px;
   left: auto;
+  color: #FFF;
   font-size: 16px;
 }
 
-.accordion li.open i.fa-minus {
+.accordion i.fa-minus {
   color: #b63b4d;
 }
 
-.accordion li.open i.fa-minus:hover {
+.accordion i.fa-minus:hover {
   color: #e20a0a;
   font-size: 22px;
 }
@@ -297,11 +297,11 @@ ul {
 /**
  * Submenu
  -----------------------------*/
-.submenu {
+ .submenu {
   display: none;
-  background: #FFF;
-  font-size: 1.2em;
-}
+  color: black;
+ }
+
 
 .submenu a {
   display: block;
