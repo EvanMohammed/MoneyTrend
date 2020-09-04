@@ -3,21 +3,21 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('Incomes', [{
-      incomeSource: 'side hustle',
-      total: 100,
+      incomeSource: 'Direct deposit',
+      total: 3000,
       UserId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
-      incomeSource: 'sold items',
+      incomeSource: 'eBay',
       total: 200,
-      UserId: 2,
+      UserId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }, {
-      incomeSource: 'job',
-      total: 300,
-      UserId: 3,
+      incomeSource: 'Bonus',
+      total: 20000,
+      UserId: 1,
       createdAt: '2020-01-01 10:10:10',
       updatedAt: '2020-01-01 10:10:10',
     }], {});
