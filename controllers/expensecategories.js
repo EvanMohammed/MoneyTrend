@@ -22,8 +22,8 @@ router.get('/api/expenses', (req, res) => {
 
 router.get('/api/expenses/total', (req, res) => {
   db.sequelize.query(
-    `SELECT SUM(total) AS total FROM expenses
-      inner join expensecategories on expenses.ExpenseCategoryId = expensecategories.id 
+    `SELECT SUM(total) AS total FROM Expenses
+      INNER JOIN ExpenseCategories on Expenses.ExpenseCategoryId = ExpenseCategories.id 
       WHERE UserId = ?
       ;`,
     {
