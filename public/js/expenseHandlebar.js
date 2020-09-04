@@ -91,9 +91,10 @@ const getExpenseData = () => {
       append(expenseSection, categorySection);
       category.Expenses.forEach((expense) => {
         const expenseItem = createNode('li');
-        const submenu = document.querySelectorAll('.submenu:last-child')[0];
+        const lastElement = document.querySelectorAll('.submenu').length;
+        const currentSubmenu = document.querySelectorAll('.submenu')[lastElement - 1]; // get last submenu in NodeList
         expenseItem.innerHTML = `<a>${expense.expenseName}, $${expense.total}<i id="deleteItem" class="fa fa-minus" data-id="${expense.id}" aria-hidden="true"></i></a>`;
-        submenu.appendChild(expenseItem);
+        currentSubmenu.appendChild(expenseItem);
       });
     });
     initAddExpenseBtn();

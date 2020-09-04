@@ -13,7 +13,7 @@ fetch('/api/income').then((response) => response.json()).then((data) => {
   incomes.forEach((income) => {
     const p = createNode('p');
     for (let i = 0; i < incomes.length; i += 1) {
-      p.innerHTML = `${income.incomeSource}:  $${income.total}  `;
+      p.innerHTML = `<i id="deleteIncomeSource" data-id="${income.id}" class="fa fa-minus" aria-hidden="true"></i> ${income.incomeSource}:  $${income.total}  `;
       append(incomeHandlebarUl, p);
     }
   });
@@ -50,4 +50,16 @@ document.querySelector('#addIncome').addEventListener('click', (event) => {
     },
     body: JSON.stringify(data),
   }).then(() => window.location.reload()).catch((error) => error);
+});
+
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'deleteIncomeSource') {
+    const id = e.target.getAttribute('data-id');
+    fetch(`/api/income/${id}`, {
+      method: 'DELETE',
+      credentials: 'same-origin',
+    }).then(() => {
+      window.location.reload();
+    });
+  }
 });

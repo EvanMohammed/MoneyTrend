@@ -3,6 +3,9 @@ body {
   background: #eee url(../images/double-bubble-outline.png);
   font-family: 'Cinzel', serif; }
 
+p {
+  font-size: 1.4em; }
+
 li {
   padding: 5px;
   margin: 5px; }
@@ -77,6 +80,7 @@ h3 {
   color: whitesmoke;
   padding-right: 20px; }
 
+/* grid system */
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -102,6 +106,7 @@ h3 {
   display: grid;
   border-radius: 2em; }
 
+/* login & signup forms */
 #beginnerForm {
   background: -webkit-radial-gradient(#bc6c25, #dda15e);
   border-radius: 2em;
@@ -116,7 +121,8 @@ img {
   margin-top: 1%;
   border-image-slice: bevel;
   border-radius: 30px 0 30px 0;
-  margin-left: 40%; }
+  margin-left: 40%; 
+}
 
 #categoryInput {
   text-align: center;
@@ -127,7 +133,9 @@ img {
 
 .form-control {
   padding: 1em;
-  margin: 0.5em; }
+  margin: 0em;
+  margin-bottom: 1em;
+  outline: none; }
 
 /* accordion dropdown styling*/
 ul {
@@ -166,7 +174,7 @@ a {
   display: block;
   padding: 0.5em 0.5em 0.5em 42px;
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 700;
   border-bottom: 1px solid #CCC;
   position: relative;
@@ -194,12 +202,12 @@ a {
   color: #FFF;
   font-size: 16px; }
 
-.accordion i.fa-minus {
+i.fa-minus {
   color: #b63b4d; }
 
-.accordion i.fa-minus:hover {
+i.fa-minus:hover {
   color: #e20a0a;
-  font-size: 22px; }
+  font-size: 24px; }
 
 .accordion li.open i.fa-plus {
   color: #14690c; }
