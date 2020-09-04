@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 // controls dropdown menu behavior
 const accordionAnimate = () => {
   const Accordion = function (el, multiple) {
@@ -42,6 +43,9 @@ const initAddExpenseBtn = () => {
       const categoryId = e.target.getAttribute('data-id');
       const newExpenseName = document.getElementById(`expenseName${categoryId}`).value.trim();
       const expenseTotal = document.getElementById(`expenseTotal${categoryId}`).value.trim();
+      if (newExpenseName === '' || expenseTotal === '') {
+        return false;
+      }
       const newItem = {
         expenseName: newExpenseName,
         total: parseInt(expenseTotal, 10),
@@ -74,13 +78,13 @@ const getExpenseData = () => {
       <li id="textarea${category.id}" style="display:none">
       <label for="expenseName">Expense Name:</label>
       <br>
-      <input class="form-control" id="expenseName${category.id}"/>
+      <input class="form-control" id="expenseName${category.id}" required/>
       <br>
       <label for="expenseTotal">Cost:</label>
       <br>
-      <input class="form-control" id="expenseTotal${category.id}"/>
+      <input class="form-control" id="expenseTotal${category.id}" required/>
       <br>
-      <button data-id="${category.id}" class="addExpense">Submit</button>
+      <button class="btn-default" data-id="${category.id}" class="addExpense">Submit</button>
       </li>
       </ul>`;
       append(expenseSection, categorySection);
@@ -99,8 +103,11 @@ const getExpenseData = () => {
 // posting to API the expenses that the user enters
 
 document.querySelector('#addCategory').addEventListener('click', (event) => {
-  const addedCategory = document.querySelector('#categoryName').value.trim();
   event.preventDefault();
+  const addedCategory = document.querySelector('#categoryName').value.trim();
+  if (addedCategory === '') {
+    return false;
+  }
   const data = {
     categoryName: addedCategory,
   };
