@@ -1,21 +1,19 @@
 <h3>My Monthly Expenses</h3>
-<div class="wrapper">
-    <div class="one">
+<div id="expenseCard">
+
     <form>
-        <div class="input-group" id="categoryInput">
+        <div style="grid-row: 1/2" class="input-group" id="categoryInput">
             <input type="text" class="form-control" id="categoryName" placeholder="Category name">
             <div class="input-group-append">
                 <button class="btn btn-default" id="addCategory" type="button">Add Category</button>
             </div>
         </div>
     </form>
-    </div>
-    
-    <div class="two">
-        <ul id="accordion" class="accordion">
 
-        </ul>
-    </div>
+    <ul style="grid-row: 2/2;" id="accordion" class="accordion">
+
+    </ul>
+
 </div>
 
 <script src="./js/expenseHandlebar.js"></script>
